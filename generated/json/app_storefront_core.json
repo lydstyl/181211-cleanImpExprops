@@ -1,0 +1,367 @@
+{
+   "cartridgeName": "app_storefront_core",
+   "app_storefront_core.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account_en_GB.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "components_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "components_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "components_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "components_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "content.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "content_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "content_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "content_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "content_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "email.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "email_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "email_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "email_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "email_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "error.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "error_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "error_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "error_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "error_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms_en_GB.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "order.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "order_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "order_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "order_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "order_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "pagecomponents_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "pagecomponents_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "pagecomponents_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "pagecomponents_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "rendering.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "rendering_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "rendering_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "rendering_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "rendering_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "revisioninfo.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "revisioninfo_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "revisioninfo_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "revisioninfo_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "revisioninfo_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search_en_GB.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "slots_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "slots_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "slots_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "slots_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storelocator.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storelocator_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storelocator_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storelocator_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storelocator_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storepickup.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storepickup_en_GB.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storepickup_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storepickup_it_IT.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storepickup_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storepickup_zh_CN.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   }
+}

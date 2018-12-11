@@ -1,0 +1,159 @@
+{
+   "cartridgeName": "app_caroll",
+   "app_caroll.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "account_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "address_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "cart.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "cart_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "checkout_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "common_nl_BE.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "confirmation.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "confirmation_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "crosslook.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "crosslook_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "footer.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "footer_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "forms_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "locale_nl_BE.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "login_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "mail.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "newsletter.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "newsletter_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "product_nl_BE.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "registration_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "search_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "services.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "shipmentinfo.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "shipmentinfo_en_GB.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "shipmentinfo_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "socolissimo.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "storelocator_fr_FR.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "testlyd_nl_BE.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   }
+}

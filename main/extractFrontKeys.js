@@ -7,7 +7,6 @@ const helper = require('../helper/helper')
  */
 module.exports = () => {
     console.log('\n\nEXTRACTING ALL FRONT KEYS')
-
     let cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
     /**
      * [ 'plugin_webdav_storefront',
@@ -35,16 +34,8 @@ module.exports = () => {
 //         // 'seo_metadatarules' 
 //     ] 
 
-//    let json = helper.extractPropsFrom( 'C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll' )
-
     cartridgesOrder.forEach( cartridge => {
         let cartridgePath = path.join( opts.cartridgesPath, cartridge )
-        // let cartridgePath = path.join("C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll")
-        // console.log( cartridgePath);
-        
-        let json = helper.extractPropsFrom( cartridgePath )
+        let json = helper.extractPropsFrom( cartridgePath, cartridge )
     });
-    
-
-
 }
