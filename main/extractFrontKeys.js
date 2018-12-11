@@ -29,13 +29,21 @@ module.exports = () => {
     'seo_metadatarules' ] 
     */
 
-   //let json = helper.extractPropsFrom( 'C:\\sfcc\\projets\\caroll' )
-   let json = helper.extractPropsFrom( 'C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll' )
+//    cartridgesOrder = [
+//         'app_caroll',
+//         'app_storefront_core',
+//         // 'seo_metadatarules' 
+//     ] 
 
-    // cartridgesOrder.forEach( cartridge => {
-    //     let cartridgePath = path.join( opts.cartridgesPath, cartridge )
-    //     let json = helper.extractPropsFrom( cartridgePath )
-    // });
+//    let json = helper.extractPropsFrom( 'C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll' )
+
+    cartridgesOrder.forEach( cartridge => {
+        let cartridgePath = path.join( opts.cartridgesPath, cartridge )
+        // let cartridgePath = path.join("C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll")
+        // console.log( cartridgePath);
+        
+        let json = helper.extractPropsFrom( cartridgePath )
+    });
     
 
 
