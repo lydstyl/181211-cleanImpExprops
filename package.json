@@ -8,5 +8,9 @@
     "start": "node index"
   },
   "author": "The Angel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "properties": "^1.2.1",
+    "recursive-readdir": "^2.2.2"
+  }
 }
