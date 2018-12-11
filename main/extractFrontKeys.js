@@ -29,8 +29,8 @@ module.exports = () => {
     */
 
    cartridgesOrder = [
-        //'app_caroll',
-        'app_storefront_core',
+        'app_caroll',
+        //'app_storefront_core',
         'seo_metadatarules' 
     ] 
 
