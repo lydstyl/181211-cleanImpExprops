@@ -296,6 +296,10 @@
       "key1": "key1",
       "key2": "key2"
    },
+   "search_ja_JP.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
    "search_zh_CN.properties": {
       "key1": "key1",
       "key2": "key2"
@@ -357,10 +361,6 @@
       "key2": "key2"
    },
    "storepickup_zh_CN.properties": {
-      "key1": "key1",
-      "key2": "key2"
-   },
-   "search_ja_JP.properties": {
       "key1": "key1",
       "key2": "key2"
    }

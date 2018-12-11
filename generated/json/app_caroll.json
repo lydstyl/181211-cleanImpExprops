@@ -16,10 +16,6 @@
       "key1": "key1",
       "key2": "key2"
    },
-   "cart.properties": {
-      "key1": "key1",
-      "key2": "key2"
-   },
    "cart_fr_FR.properties": {
       "key1": "key1",
       "key2": "key2"
@@ -153,6 +149,10 @@
       "key2": "key2"
    },
    "testlyd_nl_BE.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "cart.properties": {
       "key1": "key1",
       "key2": "key2"
    }

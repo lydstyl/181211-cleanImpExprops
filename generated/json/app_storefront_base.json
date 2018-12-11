@@ -160,10 +160,6 @@
       "key1": "key1",
       "key2": "key2"
    },
-   "error_ja_JP.properties": {
-      "key1": "key1",
-      "key2": "key2"
-   },
    "error_zh_CN.properties": {
       "key1": "key1",
       "key2": "key2"
@@ -333,6 +329,10 @@
       "key2": "key2"
    },
    "search.properties": {
+      "key1": "key1",
+      "key2": "key2"
+   },
+   "error_ja_JP.properties": {
       "key1": "key1",
       "key2": "key2"
    },

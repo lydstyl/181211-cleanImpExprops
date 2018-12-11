@@ -28,11 +28,11 @@ module.exports = () => {
     'seo_metadatarules' ] 
     */
 
-//    cartridgesOrder = [
-//         'app_caroll',
-//         'app_storefront_core',
-//         // 'seo_metadatarules' 
-//     ] 
+   cartridgesOrder = [
+        //'app_caroll',
+        'app_storefront_core',
+        'seo_metadatarules' 
+    ] 
 
     cartridgesOrder.forEach( cartridge => {
         let cartridgePath = path.join( opts.cartridgesPath, cartridge )
