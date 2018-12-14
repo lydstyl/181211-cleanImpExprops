@@ -14,7 +14,8 @@
                "demandware.cartridges.int_colissimo.id": "int_colissimo"
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "bc_caroll",
@@ -27,7 +28,8 @@
                "demandware.cartridges.bc_caroll.multipleLanguageStorefront": true
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "bc_integrationframework",
@@ -40,7 +42,8 @@
                "demandware.cartridges.bc_integrationframework.id": "bc_integrationframework"
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "bc_feeds",
@@ -3238,7 +3241,8 @@
                "global.site.name": "Salesforce Commerce Cloud"
             }
          }
-      ]
+      ],
+      "propsNb": 94
    },
    {
       "cartridgeName": "app_storefront_core",
@@ -11150,7 +11154,8 @@
                "storelist.changetohd": "更改为送货上门"
             }
          }
-      ]
+      ],
+      "propsNb": 91
    },
    {
       "cartridgeName": "app_storefront_controllers",
@@ -11170,7 +11175,8 @@
                "revisioninfo.revisionnumber": "103.1.11 - controllers"
             }
          }
-      ]
+      ],
+      "propsNb": 2
    },
    {
       "cartridgeName": "app_altima_core",
@@ -11183,7 +11189,8 @@
                "demandware.cartridges.app_altima_core.multipleLanguageStorefront": true
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "app_altima_views",
@@ -11196,7 +11203,8 @@
                "demandware.cartridges.app_altima_views.id": "app_altima_views"
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "app_altima_controllers",
@@ -11209,7 +11217,8 @@
                "demandware.cartridges.app_altima_controllers.id": "app_altima_controllers"
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "int_atos_sips",
@@ -11226,7 +11235,8 @@
                "demandware.cartridges.int_gtm.multipleLanguageStorefront": true
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "app_caroll",
@@ -12792,7 +12802,8 @@
                "test3": "ccccc"
             }
          }
-      ]
+      ],
+      "propsNb": 39
    },
    {
       "cartridgeName": "app_sg2sfra",
@@ -12805,7 +12816,8 @@
                "demandware.cartridges.app_sg2sfra.id": "app_sg2sfra"
             }
          }
-      ]
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "seo_metadatarules",
@@ -12818,6 +12830,7 @@
                "demandware.cartridges.seo_metadatarules.id": "seo_metadatarules"
             }
          }
-      ]
+      ],
+      "propsNb": 1
    }
 ]

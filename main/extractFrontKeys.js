@@ -34,7 +34,8 @@ function savePropsPath(cartridge) {
                 propName = propName[len - 1]
                 let obj = {
                     propName: propName,
-                    propPath: file
+                    propPath: file,
+                    // props Nb
                 }
                 let propJson = read.sync( file );
                 if ( propJson instanceof Error ) {
@@ -44,12 +45,13 @@ function savePropsPath(cartridge) {
                 props.push(obj)
             }
         });
-       if (props.length) {
-           return props
-       }
-       else {
-           return "This cartridge don't have any properties file."
-       }
+
+        if (props.length) {
+            return props
+        }
+        else {
+            return "This cartridge don't have any properties file."
+        }
     }
     else{
         return 'This cartridge is not found !'
@@ -63,7 +65,11 @@ module.exports = () => {
         let obj = {}
         obj.cartridgeName = cartridge
         obj.props = savePropsPath(cartridge)
+        if (typeof obj.props == 'object') {
+            obj.propsNb = obj.props.length
+        }
         allProps.push(obj)
     });
     fs.writeFileSync("C:\\sfcc\\scripts\\Caroll\\Properties\\1211-cleanImpExprops\\generated\\ALL-PROPS.json", JSON.stringify(allProps, '', 3), 'utf8')
+    return allProps
 }

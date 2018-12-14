@@ -8,6 +8,8 @@ var read = require( 'utils-fs-read-properties' );
 console.log(`Your opts.json:`)
 console.log(opts)
 
-extractFrontKeys()
+extractFrontKeys() // this create ./generated/ALL-PROPS.json
+getEssential() // this create ./generated/ESSENTIAL.json a file without duplicate
+
 // saveChangedKeysInMainCartridge()
 // rmDuplicateKeys()
