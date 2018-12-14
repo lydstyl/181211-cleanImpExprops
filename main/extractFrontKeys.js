@@ -1,41 +1,69 @@
+const fs = require('fs')
 const path = require('path')
+const recursiveReadSync = require('recursive-readdir-sync')
+const read = require( 'utils-fs-read-properties' );
 const opts = require('../opts')
-const helper = require('../helper/helper')
 
-/**
- * Return a json containing all front properties keys and values
- */
+let allProps = []
+
+function savePropsPath(cartridge) {
+    let cartPath = path.join(opts.cartridgesPath, cartridge)
+    if (fs.existsSync(cartPath)) {
+        let props = [], files
+        try {
+            files = recursiveReadSync( cartPath )
+        } 
+        catch(err){
+            if(err.errno === 34){
+                console.log('Path does not exist')
+            } 
+            else {
+                //something unrelated went wrong, rethrow
+                throw err
+            }
+        }
+        // for(var i = 0, len = files.length; i < len; i++){
+        //     console.log('Found: %s', files[i]);
+        // }
+        if (!files) return
+
+        files.forEach(file => {
+            if (file.includes('.propertie')) {
+                let propName = file.split('\\')
+                let len = propName.length
+                propName = propName[len - 1]
+                let obj = {
+                    propName: propName,
+                    propPath: file
+                }
+                let propJson = read.sync( file );
+                if ( propJson instanceof Error ) {
+                    throw propJson;
+                }
+                obj.propJson = propJson 
+                props.push(obj)
+            }
+        });
+       if (props.length) {
+           return props
+       }
+       else {
+           return "This cartridge don't have any properties file."
+       }
+    }
+    else{
+        return 'This cartridge is not found !'
+    }
+}
+
 module.exports = () => {
     console.log('\n\nEXTRACTING ALL FRONT KEYS')
     let cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
-    /**
-     * [ 'plugin_webdav_storefront',
-     'int_colissimo',
-    'bc_caroll',
-    'bc_integrationframework',
-    'bc_feeds',
-    'app_feeds',
-    'app_storefront_base',
-    'app_storefront_core',
-    'app_storefront_controllers',
-    'app_altima_core',
-    'app_altima_views',
-    'app_altima_controllers',
-    'int_atos_sips',
-    'int_gtm',
-    'app_caroll',
-    'app_sg2sfra',
-    'seo_metadatarules' ] 
-    */
-
-   cartridgesOrder = [
-        'app_caroll',
-        //'app_storefront_core',
-        'seo_metadatarules' 
-    ] 
-
-    cartridgesOrder.forEach( cartridge => {
-        let cartridgePath = path.join( opts.cartridgesPath, cartridge )
-        let json = helper.extractPropsFrom( cartridgePath, cartridge )
+    cartridgesOrder.forEach(cartridge => {
+        let obj = {}
+        obj.cartridgeName = cartridge
+        obj.props = savePropsPath(cartridge)
+        allProps.push(obj)
     });
+    fs.writeFileSync("C:\\sfcc\\scripts\\Caroll\\Properties\\1211-cleanImpExprops\\generated\\ALL-PROPS.json", JSON.stringify(allProps, '', 3), 'utf8')
 }
