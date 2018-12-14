@@ -1,5 +1,6 @@
 const opts = require('./opts')
 const extractFrontKeys = require('./main/extractFrontKeys')
+const getEssential = require('./main/getEssential')
 
 var read = require( 'utils-fs-read-properties' );
 // const saveChangedKeysInMainCartridge = require('./main/saveChangedKeysInMainCartridge')
