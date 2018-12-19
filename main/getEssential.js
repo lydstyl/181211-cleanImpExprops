@@ -29,8 +29,9 @@ function getCartridgeProps(cartridgeName) {
     This object can be translated and reimport in the main cartridge only.
  */
 module.exports = function () {
+    const cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
     let essential = {}
-    let cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
+    let logs = ''
     let mainCartridgeReached = false
     cartridgesOrder.forEach(cartridge => {
         if (!mainCartridgeReached) { // loop until the main cartridge defined in opts
@@ -40,14 +41,46 @@ module.exports = function () {
                     if (!essential[prop.propName] ) {
                         essential[prop.propName] = {}
                     }
-                    essential[prop.propName].cartridgeName = cartridge
-                    essential[prop.propName].propPath = prop.propPath
                     if (!essential[prop.propName].propJson ) {
                         essential[prop.propName].propJson = {}
                     }
+                    essential[prop.propName].cartridgeName = cartridge
+                    
+
+                
                     Object.keys(prop.propJson).forEach(key => { // merge keys and values
+                        if (essential[prop.propName].propJson[key]) { // duplicated key
+                            logs += `In ${essential[prop.propName].propPath}, key ${key} with value ${essential[prop.propName].propJson[key]} is replaced by ${prop.propJson[key]} from ${prop.propPath}\n\n`
+
+
+                            // duplicates = {
+                            //     propName1:{
+                            //         key1: ['path1', 'path2'], // paths
+                            //         key2: ...
+                            //     },
+                            //     propName2:{
+                            //         key1: ['path1', 'path2'], // paths
+                            //         key2: ...
+                            //     }
+                            // }
+
+
+                            if ( !essential.duplicates ) {
+                                essential.duplicates = {}
+                            }
+                            if ( !essential.duplicates[prop.propName] ) {
+                                essential.duplicates[prop.propName] = {}
+                            }
+                            if ( !essential.duplicates[prop.propName][key] ) {
+                                essential.duplicates[prop.propName][key] = [essential[prop.propName].propPath]
+                            }
+                            essential.duplicates[prop.propName][key].push(prop.propPath)
+                        }
+
                         essential[prop.propName].propJson[key] = prop.propJson[key]
                     })
+                    
+                    essential[prop.propName].propPath = prop.propPath
                 })
             }
             if (cartridge == opts.mainCartridge) {
@@ -60,6 +93,7 @@ module.exports = function () {
         JSON.stringify( essential, '', 3 ),
         'utf8'
     )
+    fs.writeFileSync( path.join( __dirname, '../generated/logs.txt' ), logs, 'utf8' )
     return essential
 }
 
