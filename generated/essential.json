@@ -11267,6 +11267,18 @@
       "isDuplicated": false,
       "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\app_storefront_controllers.properties"
    },
+   "testlyd_nl_BE.properties": {
+      "propJson": {
+         "test1": "aaaaa",
+         "test2": "test24",
+         "test3": "ccccc",
+         "keyTest4": "test4Avdernier",
+         "keyTest5": "leDernier"
+      },
+      "cartridgeName": "app_caroll",
+      "isDuplicated": true,
+      "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties"
+   },
    "app_altima_core.properties": {
       "propJson": {
          "demandware.cartridges.app_altima_core.id": "app_altima_core",
@@ -11571,15 +11583,5 @@
       "cartridgeName": "app_caroll",
       "isDuplicated": false,
       "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\socolissimo.properties"
-   },
-   "testlyd_nl_BE.properties": {
-      "propJson": {
-         "test1": "aaaaa",
-         "test2": "bbbbb",
-         "test3": "ccccc"
-      },
-      "cartridgeName": "app_caroll",
-      "isDuplicated": false,
-      "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties"
    }
 }

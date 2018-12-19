@@ -11169,6 +11169,15 @@
             }
          },
          {
+            "propName": "testlyd_nl_BE.properties",
+            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\controllers\\testlyd_nl_BE.properties",
+            "propJson": {
+               "test1": "aaaaa",
+               "test2": "test21",
+               "test3": "test31"
+            }
+         },
+         {
             "propName": "revisioninfo.properties",
             "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\templates\\resources\\revisioninfo.properties",
             "propJson": {
@@ -11176,7 +11185,7 @@
             }
          }
       ],
-      "propsNb": 2
+      "propsNb": 3
    },
    {
       "cartridgeName": "app_altima_core",
@@ -11188,9 +11197,18 @@
                "demandware.cartridges.app_altima_core.id": "app_altima_core",
                "demandware.cartridges.app_altima_core.multipleLanguageStorefront": true
             }
+         },
+         {
+            "propName": "testlyd_nl_BE.properties",
+            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_altima_core\\cartridge\\testlyd_nl_BE.properties",
+            "propJson": {
+               "test1": "aaaaa",
+               "test2": "test23",
+               "test3": "test33"
+            }
          }
       ],
-      "propsNb": 1
+      "propsNb": 2
    },
    {
       "cartridgeName": "app_altima_views",
@@ -11222,7 +11240,20 @@
    },
    {
       "cartridgeName": "int_atos_sips",
-      "props": "This cartridge don't have any properties file."
+      "props": [
+         {
+            "propName": "testlyd_nl_BE.properties",
+            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\int_atos_sips\\cartridge\\scripts\\testlyd_nl_BE.properties",
+            "propJson": {
+               "test1": "aaaaa",
+               "test2": "test22",
+               "test3": "test32",
+               "keyTest4": "test4Avdernier",
+               "keyTest5": "test5Avdernier"
+            }
+         }
+      ],
+      "propsNb": 1
    },
    {
       "cartridgeName": "int_gtm",
@@ -12798,8 +12829,9 @@
             "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties",
             "propJson": {
                "test1": "aaaaa",
-               "test2": "bbbbb",
-               "test3": "ccccc"
+               "test2": "test24",
+               "test3": "ccccc",
+               "keyTest5": "leDernier"
             }
          }
       ],

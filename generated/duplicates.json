@@ -1,5 +1,5 @@
 {
-   "count": 928,
+   "count": 938,
    "error.properties": {
       "siteoffline.header": [
          "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_base\\cartridge\\templates\\resources\\error.properties",
@@ -422,6 +422,30 @@
       "revisioninfo.revisionnumber": [
          "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_core\\cartridge\\templates\\resources\\revisioninfo.properties",
          "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\templates\\resources\\revisioninfo.properties"
+      ]
+   },
+   "testlyd_nl_BE.properties": {
+      "test1": [
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\controllers\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_altima_core\\cartridge\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\int_atos_sips\\cartridge\\scripts\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties"
+      ],
+      "test2": [
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\controllers\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_altima_core\\cartridge\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\int_atos_sips\\cartridge\\scripts\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties"
+      ],
+      "test3": [
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_controllers\\cartridge\\controllers\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_altima_core\\cartridge\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\int_atos_sips\\cartridge\\scripts\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties"
+      ],
+      "keyTest5": [
+         "C:\\sfcc\\projets\\caroll\\cartridges\\int_atos_sips\\cartridge\\scripts\\testlyd_nl_BE.properties",
+         "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\testlyd_nl_BE.properties"
       ]
    },
    "account.properties": {

@@ -71,5 +71,7 @@ module.exports = () => {
         allProps.push(obj)
     });
     fs.writeFileSync("C:\\sfcc\\scripts\\Caroll\\Properties\\1211-cleanImpExprops\\generated\\ALL-PROPS.json", JSON.stringify(allProps, '', 3), 'utf8')
+    console.log('extractFront finish');
+    
     return allProps
 }
