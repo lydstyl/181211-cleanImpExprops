@@ -7,9 +7,9 @@ function getCartridgeProps(cartridgeName) {
     let cartridgeProps
     allProps.forEach(obj => {
         if ( obj.cartridgeName == cartridgeName) {
-            cartridgeProps = obj.props;
+            cartridgeProps = obj.props
         }
-    });
+    })
     return cartridgeProps
 }
 
@@ -33,7 +33,7 @@ module.exports = function () {
     let cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
     let mainCartridgeReached = false
     cartridgesOrder.forEach(cartridge => {
-        if (!mainCartridgeReached) {
+        if (!mainCartridgeReached) { // loop until the main cartridge defined in opts
             let cartridgeProps = getCartridgeProps(cartridge)
             if (typeof cartridgeProps == 'object') { // escape string like "This cartridge is not found !" 
                 cartridgeProps.forEach(prop => {
@@ -42,30 +42,21 @@ module.exports = function () {
                     }
                     essential[prop.propName].cartridgeName = cartridge
                     essential[prop.propName].propPath = prop.propPath
-
                     if (!essential[prop.propName].propJson ) {
                         essential[prop.propName].propJson = {}
                     }
                     else{
-                        // prop.propJson
-                        Object.keys(prop.propJson).forEach(key => {
-                            // console.log(key); // key
-                            // console.log(prop.propJson[key]); // val
-                            
+                        Object.keys(prop.propJson).forEach(key => { // merge keys and values
                             essential[prop.propName].propJson[key] = prop.propJson[key]
-
-                            //console.log(essential[prop.propName].propJson[key]);
-                            
-                        });
+                        })
                     }
-                });
+                })
             }
-            
             if (cartridge == opts.mainCartridge) {
                 mainCartridgeReached = true
             }
         }
-    });
+    })
     fs.writeFileSync(
         path.join(__dirname, '../generated', opts.essential),
         JSON.stringify( essential, '', 3 ),
@@ -74,9 +65,9 @@ module.exports = function () {
     return essential
 }
 
-// use node ./main/getEssential.js for dev
-
+// To launch only getEssential :
+// node ./main/getEssential.js 
+// or 
+// npm run getEssential
 // module.exports()
-console.log( module.exports() );
-
-
+// console.log( module.exports() )
