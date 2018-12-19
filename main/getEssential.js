@@ -45,11 +45,9 @@ module.exports = function () {
                     if (!essential[prop.propName].propJson ) {
                         essential[prop.propName].propJson = {}
                     }
-                    else{
-                        Object.keys(prop.propJson).forEach(key => { // merge keys and values
-                            essential[prop.propName].propJson[key] = prop.propJson[key]
-                        })
-                    }
+                    Object.keys(prop.propJson).forEach(key => { // merge keys and values
+                        essential[prop.propName].propJson[key] = prop.propJson[key]
+                    })
                 })
             }
             if (cartridge == opts.mainCartridge) {
@@ -69,5 +67,5 @@ module.exports = function () {
 // node ./main/getEssential.js 
 // or 
 // npm run getEssential
-// module.exports()
+module.exports()
 // console.log( module.exports() )
