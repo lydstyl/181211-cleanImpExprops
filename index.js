@@ -19,11 +19,11 @@ function extractFrontKeysAsync() {
 
 async function extractFrontKeysSync() {
     console.log('111') // ok
-    //var x = await extractFrontKeysAsync();
-    extractFrontKeysAsync().then( ()=>{
-        console.log('then');
+    var x = await extractFrontKeysAsync();
+    // extractFrontKeysAsync().then( ()=>{
+    //     console.log('then');
         
-    } )
+    // } )
 }
 // extractFrontKeys() // this create ./generated/ALL-PROPS.json
 //wait finish here !!!
