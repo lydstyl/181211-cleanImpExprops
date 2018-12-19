@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const recursiveReadSync = require('recursive-readdir-sync')
-const read = require( 'utils-fs-read-properties' );
+const read = require( 'utils-fs-read-properties' )
 const opts = require('../opts')
 
 let allProps = []
@@ -22,8 +22,8 @@ function savePropsPath(cartridge) {
                 throw err
             }
         }
-        // for(var i = 0, len = files.length; i < len; i++){
-        //     console.log('Found: %s', files[i]);
+        // for(var i = 0, len = files.length i < len i++){
+        //     console.log('Found: %s', files[i])
         // }
         if (!files) return
 
@@ -37,14 +37,14 @@ function savePropsPath(cartridge) {
                     propPath: file,
                     // props Nb
                 }
-                let propJson = read.sync( file );
+                let propJson = read.sync( file )
                 if ( propJson instanceof Error ) {
-                    throw propJson;
+                    throw propJson
                 }
                 obj.propJson = propJson 
                 props.push(obj)
             }
-        });
+        })
 
         if (props.length) {
             return props
@@ -69,9 +69,8 @@ module.exports = () => {
             obj.propsNb = obj.props.length
         }
         allProps.push(obj)
-    });
+    })
     fs.writeFileSync("C:\\sfcc\\scripts\\Caroll\\Properties\\1211-cleanImpExprops\\generated\\ALL-PROPS.json", JSON.stringify(allProps, '', 3), 'utf8')
-    console.log('extractFront finish');
-    
+    console.log('EXTRACTING ALL FRONT KEYS FINISHED')
     return allProps
 }

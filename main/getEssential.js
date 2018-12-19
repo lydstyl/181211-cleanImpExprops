@@ -29,8 +29,7 @@ function getCartridgeProps(cartridgeName) {
     This object can be translated and reimport in the main cartridge only.
  */
 module.exports = function () {
-    console.log('essence begin');
-    
+    console.log('GET ESSENTIAL BEGIN')
     const cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
     let essential = {}
     let logs = ''
@@ -89,7 +88,7 @@ module.exports = function () {
         JSON.stringify( essential, '', 3 ),
         'utf8'
     )
-    console.log('essence finish');
+    console.log('GET ESSENTIAL FINISHED')
     return essential
 }
 
@@ -97,5 +96,5 @@ module.exports = function () {
 // node ./main/getEssential.js 
 // or 
 // npm run getEssential
-module.exports()
+//module.exports()
 // console.log( module.exports() )
