@@ -37,6 +37,7 @@ module.exports = function () {
         if (!mainCartridgeReached) { // loop until the main cartridge defined in opts
             let cartridgeProps = getCartridgeProps(cartridge)
             if (typeof cartridgeProps == 'object') { // escape string like "This cartridge is not found !" 
+
                 cartridgeProps.forEach(prop => {
                     if (!essential[prop.propName] ) {
                         essential[prop.propName] = {}
@@ -45,28 +46,14 @@ module.exports = function () {
                         essential[prop.propName].propJson = {}
                     }
                     essential[prop.propName].cartridgeName = cartridge
-                    
-
-                
+                    essential[prop.propName].isDuplicated = false
                     Object.keys(prop.propJson).forEach(key => { // merge keys and values
+
                         if (essential[prop.propName].propJson[key]) { // duplicated key
+                            essential[prop.propName].isDuplicated = true
                             logs += `In ${essential[prop.propName].propPath}, key ${key} with value ${essential[prop.propName].propJson[key]} is replaced by ${prop.propJson[key]} from ${prop.propPath}\n\n`
-
-
-                            // duplicates = {
-                            //     propName1:{
-                            //         key1: ['path1', 'path2'], // paths
-                            //         key2: ...
-                            //     },
-                            //     propName2:{
-                            //         key1: ['path1', 'path2'], // paths
-                            //         key2: ...
-                            //     }
-                            // }
-
-
                             if ( !essential.duplicates ) {
-                                essential.duplicates = {}
+                                essential.duplicates = {count:0}
                             }
                             if ( !essential.duplicates[prop.propName] ) {
                                 essential.duplicates[prop.propName] = {}
@@ -75,6 +62,7 @@ module.exports = function () {
                                 essential.duplicates[prop.propName][key] = [essential[prop.propName].propPath]
                             }
                             essential.duplicates[prop.propName][key].push(prop.propPath)
+                            essential.duplicates.count += 1
                         }
 
                         essential[prop.propName].propJson[key] = prop.propJson[key]
@@ -89,11 +77,16 @@ module.exports = function () {
         }
     })
     fs.writeFileSync(
+        path.join(__dirname, '../generated/duplicates.json'),
+        JSON.stringify( essential.duplicates, '', 3 ),
+        'utf8'
+    )
+    delete essential.duplicates
+    fs.writeFileSync(
         path.join(__dirname, '../generated', opts.essential),
         JSON.stringify( essential, '', 3 ),
         'utf8'
     )
-    fs.writeFileSync( path.join( __dirname, '../generated/logs.txt' ), logs, 'utf8' )
     return essential
 }
 
