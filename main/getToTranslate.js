@@ -59,7 +59,8 @@ module.exports = function (lang) {
             }
         });
         fs.writeFileSync(
-            path.join(__dirname, '../generated/TO-TRANSLATE.json'),
+            // path.join(__dirname, '../generated/TO-TRANSLATE.json'),
+            path.join(__dirname, '../generated', opts.toTranslate),
             JSON.stringify( toTranslate, '', 3 ),
             'utf8'
         )

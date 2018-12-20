@@ -3,7 +3,8 @@ const path = require('path')
 
 module.exports = function () {
     const opts = require('../opts')
-    const translated = require('../TRANSLATED') // put this path in opts ?
+    // const translated = require('../TRANSLATED') // put this path in opts ?
+    const translated = require( path.join('../', opts.translated) ) // put this path in opts ?
     Object.keys(translated).forEach(prop => {
         let content = '#Generate by an Angel\n'
         let newProp = prop.split('.properties')[0]
