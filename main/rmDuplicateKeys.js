@@ -53,6 +53,7 @@ module.exports = () => {
         }
         let mainProps = {}
         let diffKeys = {}
+        let keysToRemove = []
         allProps.forEach(cartridge => {
             let cartridgeTabName = cartridge
             if ( cartridge.cartridgeName == opts.mainCartridge ) {
@@ -80,7 +81,14 @@ module.exports = () => {
                                                         else{
                                                             if ( !(diffKeys[cartridgeTabName][prop.propName] == undefined) ) {
                                                                 if ( !diffKeys[cartridgeTabName][prop.propName].includes(key) ) {
-                                                                    console.log(`Removing key ${key}\nand it's value\n`);
+                                                                    // console.log(`Removing key ${key}\nand it's value\n`);
+                                                                    keysToRemove.push(
+                                                                        {
+                                                                            path: mainProp.propPath,
+                                                                            key: key,
+                                                                            val: mainProp.propJson[key]
+                                                                        }
+                                                                    )
                                                                 }
                                                             }
                                                         }
@@ -96,5 +104,13 @@ module.exports = () => {
                 })
             }
         })
+        //console.log(diffKeys);
+        keysToRemove.forEach(key => {
+            console.log(key);
+            
+        });
+
+        console.log(keysToRemove.length);
+        
     }
 }
