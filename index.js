@@ -14,13 +14,16 @@ function extractFrontKeysAsync() {
 async function extractFrontKeysSync() {
     await extractFrontKeysAsync()
 }
+async function getToTranslateSync() {
+    await getToTranslate(opts.languageToTranslate)
+}
 
 console.log(`Your opts.json:`)
 console.log(opts)
 extractFrontKeysSync() // this create ./generated/ALL-PROPS.json
 getEssential() // this create ./generated/ESSENTIAL.json a file without duplicate
 
-getToTranslate(opts.languageToTranslate) // fr_FR --> "_fr_FR.properties"
+getToTranslateSync() // fr_FR --> "_fr_FR.properties"
 
 // saveChangedKeysInMainCartridge()
 // rmDuplicateKeys()

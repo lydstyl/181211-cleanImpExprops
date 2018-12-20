@@ -10215,6 +10215,7 @@
             "propName": "product_fr_FR.properties",
             "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_storefront_core\\cartridge\\templates\\resources\\product_fr_FR.properties",
             "propJson": {
+               "testLyd": "testLyd",
                "product.breadcrumb.leftintrotext": "&laquo; Retour à",
                "product.label": "Aller au produit : {0}",
                "product.item": "Article n° :",

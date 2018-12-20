@@ -7870,6 +7870,7 @@
          "label.choiceofbonus.selectproducts": "sur {0} produits offerts sélectionnés :",
          "text.alert.choiceofbonus.addedtobasket": "Produits offerts ajoutés à votre panier",
          "error.alert.choiceofbonus.max.quantity": "Vous pouvez choisir {0} produits, mais vous avez sélectionné {1}produits.",
+         "testLyd": "testLyd",
          "product.breadcrumb.leftintrotext": "&laquo; Retour à",
          "product.label": "Aller au produit : {0}",
          "product.item": "Article n° :",
