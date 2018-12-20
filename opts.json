@@ -5,6 +5,7 @@
    "mainCartridge": "app_caroll",
    "cartridgesPath": "C:\\sfcc\\projets\\caroll\\cartridges",
 
+   "allProps": "ALL-PROPS.json",
    "essential": "essential.json",
    "toTranslate": "TO-TRANSLATE.json",
 

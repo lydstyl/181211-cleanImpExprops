@@ -19,7 +19,7 @@ const opts = require('../opts')
  */
 module.exports = function () {
     console.log('GET ESSENTIAL BEGIN')
-    const allProps = require('../generated/ALL-PROPS.json') // this require has to be in this exported fonction otherway the essential.json is based on the previous ALL-PROPS.json
+    const allProps = require('../generated/' + opts.allProps) // this require has to be in this exported fonction otherway the essential.json is based on the previous ALL-PROPS.json
     function getCartridgeProps(cartridgeName) { // so does this function
         let cartridgeProps
         allProps.forEach(obj => {
