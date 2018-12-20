@@ -1,6 +1,7 @@
 const opts = require('./opts')
 const extractFrontKeys = require('./main/extractFrontKeys')
 const getEssential = require('./main/getEssential')
+const getToTranslate = require('./main/getToTranslate')
 // const saveChangedKeysInMainCartridge = require('./main/saveChangedKeysInMainCartridge')
 // const rmDuplicateKeys = require('./main/rmDuplicateKeys')
 // const read = require( 'utils-fs-read-properties' )
@@ -18,5 +19,8 @@ console.log(`Your opts.json:`)
 console.log(opts)
 extractFrontKeysSync() // this create ./generated/ALL-PROPS.json
 getEssential() // this create ./generated/ESSENTIAL.json a file without duplicate
+
+getToTranslate(opts.languageToTranslate) // fr_FR --> "_fr_FR.properties"
+
 // saveChangedKeysInMainCartridge()
 // rmDuplicateKeys()

@@ -11270,10 +11270,10 @@
    "testlyd_nl_BE.properties": {
       "propJson": {
          "test1": "aaaaa",
-         "test2": "test24",
          "test3": "ccccc",
+         "test2": "test23",
          "keyTest4": "test4Avdernier",
-         "keyTest5": "leDernier :-) :-) :-)"
+         "keyTest5": "leDernier !"
       },
       "cartridgeName": "app_caroll",
       "isDuplicated": true,
