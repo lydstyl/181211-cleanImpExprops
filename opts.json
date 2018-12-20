@@ -1,6 +1,7 @@
 {
-   "mode": "export",
+   "mode": "import",
    "languageToTranslate": "fr_FR",
+   "newLangage": "it_IT",
    "cartridgesPath": "C:\\sfcc\\projets\\caroll\\cartridges",
    "mainCartridge": "app_caroll",
    "cartridgesOrder": "seo_metadatarules:app_sg2sfra:app_caroll:int_gtm:int_atos_sips:app_altima_controllers:app_altima_views:app_altima_core:app_storefront_controllers:app_storefront_core:app_storefront_base:app_feeds:bc_feeds:bc_integrationframework:bc_caroll:int_colissimo:plugin_webdav_storefront",
