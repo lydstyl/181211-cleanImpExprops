@@ -1,17 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 const opts = require('../opts')
-const allProps = require('../generated/ALL-PROPS.json')
-
-function getCartridgeProps(cartridgeName) {
-    let cartridgeProps
-    allProps.forEach(obj => {
-        if ( obj.cartridgeName == cartridgeName) {
-            cartridgeProps = obj.props
-        }
-    })
-    return cartridgeProps
-}
 
 /**
  * Write and return an object like this one :
@@ -30,6 +19,16 @@ function getCartridgeProps(cartridgeName) {
  */
 module.exports = function () {
     console.log('GET ESSENTIAL BEGIN')
+    const allProps = require('../generated/ALL-PROPS.json') // this require has to be in this exported fonction otherway the essential.json is based on the previous ALL-PROPS.json
+    function getCartridgeProps(cartridgeName) { // so does this function
+        let cartridgeProps
+        allProps.forEach(obj => {
+            if ( obj.cartridgeName == cartridgeName) {
+                cartridgeProps = obj.props
+            }
+        })
+        return cartridgeProps
+    }
     const cartridgesOrder = opts.cartridgesOrder.split(':').reverse()
     let essential = {}
     let logs = ''
