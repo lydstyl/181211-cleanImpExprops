@@ -25,30 +25,45 @@ function isLangToTranslate(prop) {
     }
 }
 
+/**
+ * Write the .json to be translated
+ * It contains keys from essential.json (an extraction of all properties by priority in the cartridge path)
+ * but if there is duplicate key between langage properties and no langage properties
+ * for exemple 
+ * between "xxx.properties" and "xxx_fr_FR.properties"
+ * if fr_FR is the langage to translate
+ * then the xxx_fr_FR.properties keys will replace the xxx.properties keys
+ */
+// new Promise(resolve => {
+//     extractFrontKeys()
+// })
 module.exports = function (lang) {
-    const essential = require('../generated/essential')
-    let toTranslate = {}
-    Object.keys(essential).forEach(prop => {
-        if ( isNoLang(prop) ) { // eg: "xxx.properties"
-            toTranslate[prop] = essential[prop].propJson
-        }
-    });
-    Object.keys(essential).forEach(prop => { // eg: "xxx_fr_FR.properties" if fr_FR is the language to translate
-        if ( isLangToTranslate(prop).res ) {
-            let propName = prop.split( '_' + isLangToTranslate(prop).lang )[0] + '.properties'
-            Object.keys(essential[prop].propJson).forEach(key => {
-                if ( !toTranslate[propName] ) {
-                    toTranslate[propName] = {}
-                }
-                // console.log(`\n${key}:\nNo lang properties: ${toTranslate[propName][key]}\nreplaced by ${opts.languageToTranslate} properties\n${essential[prop].propJson[key]}`);
-                toTranslate[propName][key] = essential[prop].propJson[key]
-            });
-        }
-    });
-    fs.writeFileSync(
-        path.join(__dirname, '../generated/TO-TRANSLATE.json'),
-        JSON.stringify( toTranslate, '', 3 ),
-        'utf8'
-    )
+    return new Promise(resolve => {
+        const essential = require('../generated/essential')
+        let toTranslate = {}
+        Object.keys(essential).forEach(prop => {
+            if ( isNoLang(prop) ) { // eg: "xxx.properties"
+                toTranslate[prop] = essential[prop].propJson
+            }
+        });
+        Object.keys(essential).forEach(prop => { // eg: "xxx_fr_FR.properties" if fr_FR is the language to translate
+            if ( isLangToTranslate(prop).res ) {
+                let propName = prop.split( '_' + isLangToTranslate(prop).lang )[0] + '.properties'
+                Object.keys(essential[prop].propJson).forEach(key => {
+                    if ( !toTranslate[propName] ) {
+                        toTranslate[propName] = {}
+                    }
+                    // console.log(`\n${key}:\nNo lang properties: ${toTranslate[propName][key]}\nreplaced by ${opts.languageToTranslate} properties\n${essential[prop].propJson[key]}`);
+                    toTranslate[propName][key] = essential[prop].propJson[key]
+                });
+            }
+        });
+        fs.writeFileSync(
+            path.join(__dirname, '../generated/TO-TRANSLATE.json'),
+            JSON.stringify( toTranslate, '', 3 ),
+            'utf8'
+        )
+        //return toTranslate
+    })
 }
 // module.exports() // for debug and to comment after
