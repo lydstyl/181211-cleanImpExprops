@@ -7,35 +7,6 @@ const help = require('../helper/helper')
  * Remove duplicate key/val of all properties in and only in the main cartridge
  */
 module.exports = () => {
-    // Caroll = A
-
-    // A key:val --> ne pas supprimer
-    // B key:val-différente
-    // C key:val
-
-    // A key:val --> supprimer
-    // B key:val
-    // C key:val1
-
-    // si pas de ALL-PROPS.json
-    //     log il faut lancer extract avant !
-    // sinon
-    //     let mainProps = {}
-    //     pour chaque mainProp dans main (app_carroll)
-    //         pour chaque mainKey
-    //             let mainVal
-    //             pour chaque cartridge sauf main ou minorCartridge du plus au moins important
-    //                 pour chaque prop
-    //                     si prop == mainProp
-    //                         pour chaque key
-    //                             si key == mainKey
-    //                                 let val
-    //                                 si val != mainVal
-    //                                     diffKeys.push({propName:propName, key:key}) // ajouter la key dans diffkeys
-    //                                 sinon
-    //                                     si key non présente dans diffKeys
-    //                                         supprimer le couple mainKey et mainVal de mainProps
-
     if ( !fs.existsSync( path.join( __dirname, '../generated', opts.allProps ) ) ) {
         console.log( `${opts.allProps} is needed! Please first run this script in extract mode to generate it.` )
         return
@@ -81,7 +52,6 @@ module.exports = () => {
                                                         else{
                                                             if ( !(diffKeys[cartridgeTabName][prop.propName] == undefined) ) {
                                                                 if ( !diffKeys[cartridgeTabName][prop.propName].includes(key) ) {
-                                                                    // console.log(`Removing key ${key}\nand it's value\n`);
                                                                     keysToRemove.push(
                                                                         {
                                                                             name: mainProp.propName,
@@ -105,7 +75,6 @@ module.exports = () => {
                 })
             }
         })
-        //help.writeJson('keysToRemove', keysToRemove)   
         const keysToRemove2 = {}
         keysToRemove.forEach(key => {
             if ( !keysToRemove2[key.name]) {
@@ -125,17 +94,32 @@ module.exports = () => {
                 ) 
             }
         });
-        //help.writeJson('keysToRemove2', keysToRemove2)
+        help.writeJson('DUPLICATED_KEYS', keysToRemove2)
         Object.keys(keysToRemove2).forEach(prop => {
-            console.log(prop); // prop name common_fr_FR.properties
-            //pour chaque ligne du fichier.properties
-            keysToRemove2[prop].forEach(key => {
-                //console.log(key.val);
-                //si la ligne contient une clé key.key
-                console.log(key.key);
-                    // enlever la ligne
+            let newProp = ''
+            let propPath = path.join( opts.cartridgesPath, opts.mainCartridge, 'cartridge/templates/resources', prop )
+            let lines = require('fs').readFileSync(propPath, 'utf-8')
+                        .split('\n')
+                        .filter(Boolean)
+            lines.forEach(line => {
+                let lineKey = line.split('=')[0]
+                let duplicate = false
+                for (let i = 0; i < keysToRemove2[prop].length; i++) {
+                    const key = keysToRemove2[prop][i];
+                    if ( lineKey == key.key) {
+                        duplicate = true
+                        console.log('Duplicate key detected --> ' + lineKey + ' --> and removed');
+                        break
+                    }
+                }
+                if (!duplicate) {
+                    newProp += line
+                }
             });
+            fs.writeFileSync( 
+                path.join( help.mainDir(), 'generated/duplicatedKeysRemovedProps', prop), 
+                newProp 
+            )
         });
-        // réécrire le fichier sans les ligne enlevées
     }
 }
