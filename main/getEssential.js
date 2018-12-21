@@ -76,11 +76,11 @@ module.exports = function () {
             }
         }
     })
-    fs.writeFileSync(
-        path.join(__dirname, '../generated/duplicates.json'),
-        JSON.stringify( essential.duplicates, '', 3 ),
-        'utf8'
-    )
+    // fs.writeFileSync(
+    //     path.join(__dirname, '../generated/duplicates.json'),
+    //     JSON.stringify( essential.duplicates, '', 3 ),
+    //     'utf8'
+    // )
     delete essential.duplicates
     fs.writeFileSync(
         path.join(__dirname, '../generated', opts.essential),
