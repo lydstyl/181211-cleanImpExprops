@@ -96,11 +96,11 @@ module.exports = () => {
         });
         help.writeJson('DUPLICATED_KEYS', keysToRemove2)
         Object.keys(keysToRemove2).forEach(prop => {
+            const propPath = path.join( opts.cartridgesPath, opts.mainCartridge, 'cartridge/templates/resources', prop )
+            const lines = require('fs') .readFileSync(propPath, 'utf-8')
+                                        .split('\n')
+                                        .filter(Boolean)
             let newProp = ''
-            let propPath = path.join( opts.cartridgesPath, opts.mainCartridge, 'cartridge/templates/resources', prop )
-            let lines = require('fs').readFileSync(propPath, 'utf-8')
-                        .split('\n')
-                        .filter(Boolean)
             lines.forEach(line => {
                 let lineKey = line.split('=')[0]
                 let duplicate = false
@@ -108,11 +108,15 @@ module.exports = () => {
                     const key = keysToRemove2[prop][i];
                     if ( lineKey == key.key) {
                         duplicate = true
-                        console.log('Duplicate key detected --> ' + lineKey + ' --> and removed');
+                        console.log(
+`${propPath}
+${lineKey}
+was duplicated and is now removed !
+`                       );
                         break
                     }
                 }
-                if (!duplicate) {
+                if ( !duplicate ) {
                     newProp += line
                 }
             });
