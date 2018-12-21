@@ -84,6 +84,7 @@ module.exports = () => {
                                                                     // console.log(`Removing key ${key}\nand it's value\n`);
                                                                     keysToRemove.push(
                                                                         {
+                                                                            name: mainProp.propName,
                                                                             path: mainProp.propPath,
                                                                             key: key,
                                                                             val: mainProp.propJson[key]
@@ -104,13 +105,37 @@ module.exports = () => {
                 })
             }
         })
-        //console.log(diffKeys);
+        //help.writeJson('keysToRemove', keysToRemove)   
+        const keysToRemove2 = {}
         keysToRemove.forEach(key => {
-            console.log(key);
-            
+            if ( !keysToRemove2[key.name]) {
+                keysToRemove2[key.name] = [{
+                    key: key.key,
+                    val: key.val,
+                    //path: key.path
+                }]
+            }
+            else{
+                keysToRemove2[key.name].push(
+                    {
+                        key: key.key,
+                        val: key.val,
+                        //path: key.path
+                    }
+                ) 
+            }
         });
-
-        console.log(keysToRemove.length);
-        
+        //help.writeJson('keysToRemove2', keysToRemove2)
+        Object.keys(keysToRemove2).forEach(prop => {
+            console.log(prop); // prop name common_fr_FR.properties
+            //pour chaque ligne du fichier.properties
+            keysToRemove2[prop].forEach(key => {
+                //console.log(key.val);
+                //si la ligne contient une clé key.key
+                console.log(key.key);
+                    // enlever la ligne
+            });
+        });
+        // réécrire le fichier sans les ligne enlevées
     }
 }

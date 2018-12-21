@@ -8,7 +8,7 @@ exports.writeJson = (name, content) => {
     console.log( `\nWriting ${name + '.json'}` )
     content = JSON.stringify(content, '', 3)
     fs.writeFileSync( 
-        path.join( this.mainDir(), 'generated/json', name + '.json'), 
+        path.join( this.mainDir(), 'generated', name + '.json'), 
         content 
     )
 }
