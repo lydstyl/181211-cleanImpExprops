@@ -1,3 +1,21 @@
+/**
+ * Ce script fonctionne avec le fichier opts.json qu'il faut préalablement éditier.
+ * 
+ * Il comporte 3 modes :
+ * 
+ * 1/ 'extract' 
+ *      Il génère un .json qu'il faudra traduire.
+ * 
+ * 2/ 'import'
+ *      Il nécessite d'avoir lancé extract en premier.
+ *      Placez le .json extrait et traduit à la racine de ce dossier.
+ *      Le script génère toutes les .properties traduites.
+ * 
+ * 3/ 'remove duplicates'
+ *      Il nécessite d'avoir lancé extract en premier.
+ *      Le script génère uniquement les .properties qui avaient une ou plusieurs clés en double.
+ */
+
 const opts = require('./opts')
 console.log(`Your opts.json:`)
 console.log(opts)
