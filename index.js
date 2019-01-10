@@ -46,3 +46,6 @@ if (opts.mode == 'remove duplicates') {
     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
     rmDuplicateKeys()
 }
+if (opts.mode == 'emptyOrFR') { // vides ou même valeur que FR
+    
+}

@@ -11660,20 +11660,6 @@
             }
          },
          {
-            "propName": "common_fr_FR_nl_BE.properties",
-            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\common_fr_FR_nl_BE.properties",
-            "propJson": {
-               "button.addtocart": "Toevoegen aan winkelmandje"
-            }
-         },
-         {
-            "propName": "common_nl_BE.properties",
-            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\common_nl_BE.properties",
-            "propJson": {
-               "button.addtocart": "Toevoegen aan winkelmandje"
-            }
-         },
-         {
             "propName": "confirmation.properties",
             "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\confirmation.properties",
             "propJson": {
@@ -12262,15 +12248,6 @@
             }
          },
          {
-            "propName": "locale_nl_BE.properties",
-            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\locale_nl_BE.properties",
-            "propJson": {
-               "global.crosslook.add": "Voeg de volledige look toe",
-               "global.details": "Details",
-               "global.newweb": "Nieuwigheid"
-            }
-         },
-         {
             "propName": "login_fr_FR.properties",
             "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\login_fr_FR.properties",
             "propJson": {
@@ -12540,43 +12517,6 @@
             }
          },
          {
-            "propName": "product_fr_FR_nl_BE.properties",
-            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\product_fr_FR_nl_BE.properties",
-            "propJson": {
-               "product.addtowishlist": "Toevoegen aan mijn verlanglijstje",
-               "product.care.title": "Onderhoud",
-               "product.centimeters": "cm",
-               "product.composition.title": "Samenstelling",
-               "product.composition_doublure": "Voering",
-               "product.description.title": "Alles weten in een oogopslag",
-               "product.grams": "gram",
-               "product.height_heel": "Hoogte van de hak",
-               "product.height_stem": "Hoogte van de schacht",
-               "product.instorebook": "Reserveren in de winkel",
-               "product.item": "Artikelnr.:",
-               "product.length": "Lengte",
-               "product.length_legs": "Lengte tussen de benen",
-               "product.notinstock": "Het product is niet voorradig",
-               "product.selectsize": "Maat",
-               "product.variations.sizechart": "Vind uw maat",
-               "product.weight": "Gewicht"
-            }
-         },
-         {
-            "propName": "product_nl_BE.properties",
-            "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\product_nl_BE.properties",
-            "propJson": {
-               "product.care.title": "Onderhoud",
-               "product.composition.title": "Samenstelling",
-               "product.instorebook": "Reservatie",
-               "product.item": "Itemnr.:",
-               "product.notinstock": "Product niet beschikbaar",
-               "product.promotions.special": "Speciaal aanbod",
-               "product.selectsize": "Maat",
-               "product.variations.sizechart": "Maattabel"
-            }
-         },
-         {
             "propName": "registration_fr_FR.properties",
             "propPath": "C:\\sfcc\\projets\\caroll\\cartridges\\app_caroll\\cartridge\\templates\\resources\\registration_fr_FR.properties",
             "propJson": {
@@ -12843,7 +12783,7 @@
             }
          }
       ],
-      "propsNb": 40
+      "propsNb": 35
    },
    {
       "cartridgeName": "app_sg2sfra",

@@ -1,0 +1,38 @@
+{
+    "locale.properties": {
+        "global.newweb": "Nieuwigheid",
+        "global.details": "Details",
+        "global.crosslook.add": "Voeg de volledige look toe"
+    },
+    "product.properties": {
+        "product.composition.title": "Samenstelling",
+        "product.care.title": "Onderhoud",
+        "product.promotions.special": "Speciaal aanbod",
+        "product.variations.sizechart": "Maattabel",
+        "product.selectsize ": " Maat",
+        "product.item": "Itemnr.:",
+        "product.instorebook": "Reservatie",
+        "product.notinstock": "Product niet beschikbaar",
+        "product.height_stem ": " Hoogte van de schacht",
+        "product.height_heel ": " Hoogte van de hak",
+        "product.length ": " Lengte",
+        "product.length_legs ": " Lengte tussen de benen",
+        "product.weight ": " Gewicht",
+        "product.composition.title": "Samenstelling",
+        "product.composition_doublure ": " Voering",
+        "product.care.title": "Onderhoud",
+        "product.centimeters ": " cm",
+        "product.grams ": " gram",
+        "product.variations.sizechart": "Vind uw maat",
+        "product.selectsize ": " Maat",
+        "product.description.title": "Alles weten in een oogopslag",
+        "product.item": "Artikelnr.:",
+        "product.instorebook": "Reserveren in de winkel",
+        "product.notinstock": "Het product is niet voorradig",
+        "product.addtowishlist": "Toevoegen aan mijn verlanglijstje"
+    },
+    "common.properties": {
+        "button.addtocart": "Toevoegen aan winkelmandje",
+        "button.addtocart": "Toevoegen aan winkelmandje"
+    }
+}
