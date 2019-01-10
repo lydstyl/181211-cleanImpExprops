@@ -46,6 +46,8 @@ if (opts.mode == 'remove duplicates') {
     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
     rmDuplicateKeys()
 }
-if (opts.mode == 'emptyOrFR') { // vides ou même valeur que FR
-    
+
+
+if (opts.mode == 'remove the already translated from extract') {
+    require('./main/rmAlreadyTranslated')()
 }
