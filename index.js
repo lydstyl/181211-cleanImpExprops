@@ -6,13 +6,17 @@
  * 1/ 'extract' 
  *      Il génère un .json qu'il faudra traduire.
  * 
+ * 
+ * ATTENTION : pour les autre modes ci-dessous, il est nécessaire d'avoir lancé le mode extract d'abord.
+ * 
+ * 1.2/ 'remove the already translated from extract'
+ *      Il génère un .jsoin qu'il faudra traduire sans ce qui est déjà traduit.
+ * 
  * 2/ 'import'
- *      Il nécessite d'avoir lancé extract en premier.
  *      Placez le .json extrait et traduit à la racine de ce dossier.
  *      Le script génère toutes les .properties traduites.
  * 
  * 3/ 'remove duplicates'
- *      Il nécessite d'avoir lancé extract en premier.
  *      Le script génère uniquement les .properties qui avaient une ou plusieurs clés en double.
  */
 
