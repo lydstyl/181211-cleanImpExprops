@@ -2,13 +2,14 @@ const fs = require('fs')
 const opts = require('../opts.json')
 const essential = require('../generated/essential.json')
 module.exports = () => {
-    let csv = 'KEY;VAL\n'
+    let csv = 'KEY§VAL\n'
     Object.keys(essential).forEach( propName => {
         if ( propName.includes('es_ES') && !propName.includes('.swp') ) {
             const prop = essential[propName].propJson
             Object.keys(prop).forEach(key => {
                 const val = prop[key]
-                csv += `${key};${val}`
+                propName = propName.replace('_' + opts.languageToTranslate + '.properties', '')
+                csv += `${propName}>${key}§${val}\n`
             });
         }
     });

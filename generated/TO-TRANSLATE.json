@@ -124,8 +124,6 @@
       "demandware.cartridges.bm_instocknotification.multipleLanguageStorefront": true
    },
    "forms.properties": {
-      "99": "Avenue Aristide Briand<br/>",
-      "92120": "Montrouge - Francia<br/>",
       "global.yes": "Yes",
       "global.no": "No",
       "global.select": "Select",
@@ -228,7 +226,7 @@
       "confirm.delete": "Do you want to remove this {0}?",
       "contactus.address": "Dirección:",
       "contactus.address.label": "Dirección",
-      "contactus.addressinfo": "BaByliss SARL (París)<br/>",
+      "contactus.addressinfo": "BaByliss SARL (París)<br/>99 Avenue Aristide Briand<br/>92120 Montrouge - Francia<br/>",
       "contactus.addressinfo.babyliss": "BaByliss Ibérica SLU ",
       "contactus.addressinfo.rue": "Calle Musgo, 2, ",
       "contactus.addressinfo.tel": "(+34) 91 180 04 79",
@@ -806,11 +804,7 @@
       "year.2022": 2022,
       "contactus.numproduct.tooltiptext": "El número de unidad se encuentra en el folleto azul en el interior de la caja, y además en una etiqueta blanca pegada al aparato, que se puede encontrar quitando el filtro trasero del secador de pelo.",
       "contactus.referenceproduct": "¿Buscas información sobre este producto?<br/> Visita la página específica <a href=\"\"><span class=\"contact-infos--bold\">haciendo clic aquí</span></a>",
-      "contactus.referenceproduct.tooltiptext": "Encontrarás la referencia del producto en el aparato. La referencia va precedida de «Mod.» o «REF». ",
-      "Puedes": "ver algunos ejemplos a continuación: ",
-      "<ul>": null,
-      "<li>En": "el mango del secador, comenzando por la letra D, o los números 6 o 5</li>",
-      "<li>Entre": "las dos placa"
+      "contactus.referenceproduct.tooltiptext": "Encontrarás la referencia del producto en el aparato. La referencia va precedida de «Mod.» o «REF». Puedes ver algunos ejemplos a continuación: <ul><li>En el mango del secador, comenzando por la letra D, o los números 6 o 5</li><li>Entre las dos placa</li>"
    },
    "int_silverpop.properties": {
       "demandware.cartridges.int_silverpop.multipleLanguageStorefront": true,
@@ -1811,7 +1805,7 @@
       "contact.career.label": "Empleos",
       "contact.legendone": "¿Alguna otra pregunta?",
       "contact.legendtwo": "<span>Contacta con nosotros rellenando el siguiente formulario.</span>",
-      "contact.notice.description": "Encuentra en línea los manuales de instrucciones y las consignas de seguridad de nuestros productos actualmente a la venta.",
+      "contact.notice.description": "Encuentra en línea los manuales de instrucciones y las consignas de seguridad de nuestros productos actualmente a la venta.<br/> Si tu producto no está en este sitio web, puedes solicitar estos documentos en la pestaña",
       "contact.notice.label": "Manual de instrucciones",
       "contact.notice.linkother": "<span class=\"contact-infos--bold\">«Otros»</span>",
       "contact.other.label": "Otros",
@@ -1819,7 +1813,6 @@
       "contact.sav.label": "Servicio posventa / Reclamaciones",
       "contact.advice.helpers": "Te animamos a consultar la página dedicada <br/> a este producto <a href=\"#\"><span class=\"contact-infos--bold\">haciendo clic aquí</span></a>",
       "contact.career.description": "Te animamos a consultar la página <a href=\"{0}\"><span class=\"contact-infos--bold\">«EL GRUPO BABYLISS»</span></a> </br> para saber más y presentar tu candidatura.",
-      "<br/>": "Si tu producto no está en este sitio web, puedes solicitar estos documentos en la pestaña",
       "contact.sav.helpers": "Un asesor contestará tus preguntas <br/> en el siguiente número: <a href=\"tel: 0810343536\"><span class=\"contact-infos--bold\"> 0 810 34 35 36 </span></a>"
    },
    "contact_en.properties": {
