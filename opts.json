@@ -1,15 +1,15 @@
 {
-   "mode": "remove the already translated from extract",
+   "mode": "extract",
    
-   "cartridgesOrder": "seo_metadatarules:app_sg2sfra:app_caroll:int_gtm:int_atos_sips:app_altima_controllers:app_altima_views:app_altima_core:app_storefront_controllers:app_storefront_core:app_storefront_base:app_feeds:bc_feeds:bc_integrationframework:bc_caroll:int_colissimo:plugin_webdav_storefront",
-   "mainCartridge": "app_caroll",
-   "cartridgesPath": "C:\\sfcc\\projets\\caroll\\cartridges",
+   "cartridgesOrder": "app_babyliss_es:app_babyliss_fr:app_babyliss_fr_controllers:app_productreviews:bc_library:int_paymetric:int_captureplus:int_recaptcha:int_ga:int_silverpop:bm_instocknotification:bc_integrationframework:bm_integrationframework:int_barclaycard:int_hatch:bc_productreviews",
+   "mainCartridge": "app_babyliss_es",
+   "cartridgesPath": "C:\\sfcc\\projets\\babyliss\\cartridges",
 
    "allProps": "ALL-PROPS.json",
    "essential": "essential.json",
    "toTranslate": "TO-TRANSLATE.json",
 
-   "languageToTranslate": "fr_FR",
-   "newLangage": "nl_BE",
+   "languageToTranslate": "es_ES",
+   "newLangage": "pt_ES",
    "translated": "NE2.json"
 }
