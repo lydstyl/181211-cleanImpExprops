@@ -50,8 +50,10 @@ if (opts.mode == 'remove duplicates') {
     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
     rmDuplicateKeys()
 }
-
-
 if (opts.mode == 'remove the already translated from extract') {
     require('./main/rmAlreadyTranslated')()
+}
+if (opts.mode == 'extract only new Langage'){ // eg only extract info from properties thant includes es_ES
+    // needs to launch extract mode first
+    require('./main/extracOnlyNewLangage')()
 }
