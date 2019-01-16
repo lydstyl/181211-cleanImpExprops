@@ -9,7 +9,6 @@ function isEmpty(obj) {
         if(obj.hasOwnProperty(prop))
             return false;
     }
-
     return JSON.stringify(obj) === JSON.stringify({});
 }
 module.exports = () => {
@@ -17,10 +16,9 @@ module.exports = () => {
         let propLang = propName.split('.properties')[0]
         propLang = propLang.match(/^.*_([a-z]{2}_[A-Z]{2})$/)
         if (propLang && propLang[1]) {
-            // for a list of locales, extract only the keys and values that are in fr_FR en nl_NL but not in the requested locale.
+            // For a list of locales, extract only the keys and values that are in fr_FR and nl_NL but not in the requested locale.
             locales.forEach(locale => {
                 if (propLang[1] === locale ) {
-                    //console.log( essential[propName] )
                     if (!allLocalesNeeded[locale]) {
                         allLocalesNeeded[locale] = {}
                     }
@@ -69,50 +67,33 @@ module.exports = () => {
             })
         }
     })
-    //console.log( toTranslate );
-    // si toutes les locales sont renseigné pas besoin de le traduire on l'enlève
+    // remove line if already translated
     let toTranslate2 = []
     for (let j = 0; j < toTranslate.length; j++) {
         const line = toTranslate[j];
         lineKeys = Object.keys(line)
         if (
-            !(line.key &&
-            line.fr_FR &&
-            line.nl_NL &&
-            line.it_IT &&
-            line.de_DE &&
-            line.nl_BE &&
-            line.es_ES)
+            !(
+                line.key &&
+                line.fr_FR &&
+                line.nl_NL &&
+                line.it_IT &&
+                line.de_DE &&
+                line.nl_BE &&
+                line.es_ES
+            )
         ) 
         {
             toTranslate2.push( line )
         }
     }
-
-    console.log( toTranslate2 );
-    
-
-    // const Json2csvParser = require('json2csv').Parser;
-    // const fields = ['car', 'price', 'color'];
-    // const myCars = [
-    //   {
-    //     "car": "Audi",
-    //     "price": 40000,
-    //     "color": "blue"
-    //   }, {
-    //     "car": "BMW",
-    //     "price": 35000,
-    //     "color": "black"
-    //   }, {
-    //     "car": "Porsche",
-    //     "price": 60000,
-    //     "color": "green"
-    //   }
-    // ];
-     
-    // const json2csvParser = new Json2csvParser({ fields });
-    // const csv = json2csvParser.parse(myCars);
-     
-    // console.log(csv);
-
+    const Json2csvParser = require('json2csv').Parser;
+    const fields = ['key', 'fr_FR', 'nl_NL', 'it_IT', 'de_DE', 'nl_BE', 'es_ES']
+    const json2csvParser = new Json2csvParser({ fields });
+    const csv = json2csvParser.parse(toTranslate2);
+    fs.writeFileSync(
+        path.join(__dirname, '../generated/ecommerce.csv'),
+        csv,
+        'utf-8'
+    )
 }
