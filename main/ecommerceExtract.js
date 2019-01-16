@@ -1,6 +1,8 @@
 const fs = require('fs')
+const path = require('path')
 const essential = require('../generated/essential.json')
-const locales = ['it_IT']
+const locales = ['it_IT', 'de_DE', 'nl_BE', 'es_ES', 'nl_NL', 'fr_FR']
+const ecomLocales = ['nl_NL', 'fr_FR']
 // const allLocalesNeeded = {
 //     l1: {},
 //     l2: {}
@@ -30,18 +32,90 @@ module.exports = () => {
                     if (!allLocalesNeeded[locale]) {
                         allLocalesNeeded[locale] = {}
                     }
-                    newPropName = propName.split('_' + locale + '.properties')
+                    newPropName = propName.split('_' + locale + '.properties')[0]
                     if (!allLocalesNeeded[locale][propName]) {
                         allLocalesNeeded[locale][newPropName] = {}
                     }
                     
+                    allLocalesNeeded[locale][newPropName] = JSON.parse( JSON.stringify(essential[propName].propJson, null, 4) )
                     if ( isEmpty(essential[propName].propJson) ) {
                         
-                        allLocalesNeeded[locale][newPropName] = JSON.parse( JSON.stringify(essential[propName].propJson, null, 4) )
                     }
                 }    
             })
         }
     })
-    console.log(allLocalesNeeded)
+    // fs.writeFileSync(
+    //     path.join(__dirname, '../generated/allLocalesNeeded.json'),
+    //     JSON.stringify(allLocalesNeeded, null, 4), 
+    //     'utf-8'
+    // )
+    const toTranslateInLocales= ['it_IT', 'de_DE', 'nl_BE', 'es_ES']
+    let toTranslate = []
+    function addToTranslate(propName, frAndNlKey) {
+        const csvKey = `${propName} > ${frAndNlKey}`
+        let obj = {}
+        obj.key = csvKey
+        obj.fr_FR = allLocalesNeeded.fr_FR[propName][frAndNlKey]
+        obj.nl_NL = allLocalesNeeded.nl_NL[propName][frAndNlKey]
+        toTranslateInLocales.forEach( locale => {
+            if ( !allLocalesNeeded[locale] ) {
+                allLocalesNeeded[locale] = {}
+            }
+            if ( !allLocalesNeeded[locale][propName] ) {
+                allLocalesNeeded[locale][propName] = {}
+            }
+            obj[locale] = allLocalesNeeded[locale][propName][frAndNlKey]
+        });
+        toTranslate.push(obj)
+    }
+    Object.keys(allLocalesNeeded.fr_FR).forEach(propName => {
+        const prop = allLocalesNeeded.fr_FR[propName]
+        if (allLocalesNeeded.nl_NL[propName]) {
+            Object.keys(prop).forEach( frAndNlKey => {
+                if (allLocalesNeeded.nl_NL[propName][frAndNlKey]) { // key exist in fr_FR an in nl_NL
+                    addToTranslate(propName, frAndNlKey)
+                }
+            })
+        }
+    })
+
+    console.log( toTranslate );
+    // si toutes les locales sont renseigné pas besoin de le traduire on l'enlève
+    toTranslate.forEach( line => {
+
+        for (let i = 0; i < Object.keys(line).length; i++) {
+            const header = Object.keys(line)[i];
+            console.log(header);
+            if ( !line[header] ) {
+                
+            }
+        }
+
+    });
+    
+
+    // const Json2csvParser = require('json2csv').Parser;
+    // const fields = ['car', 'price', 'color'];
+    // const myCars = [
+    //   {
+    //     "car": "Audi",
+    //     "price": 40000,
+    //     "color": "blue"
+    //   }, {
+    //     "car": "BMW",
+    //     "price": 35000,
+    //     "color": "black"
+    //   }, {
+    //     "car": "Porsche",
+    //     "price": 60000,
+    //     "color": "green"
+    //   }
+    // ];
+     
+    // const json2csvParser = new Json2csvParser({ fields });
+    // const csv = json2csvParser.parse(myCars);
+     
+    // console.log(csv);
+
 }
