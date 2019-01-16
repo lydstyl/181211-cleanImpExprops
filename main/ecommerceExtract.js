@@ -3,13 +3,7 @@ const path = require('path')
 const essential = require('../generated/essential.json')
 const locales = ['it_IT', 'de_DE', 'nl_BE', 'es_ES', 'nl_NL', 'fr_FR']
 const ecomLocales = ['nl_NL', 'fr_FR']
-// const allLocalesNeeded = {
-//     l1: {},
-//     l2: {}
-// }
 const allLocalesNeeded = {}
-
-
 function isEmpty(obj) {
     for(var prop in obj) {
         if(obj.hasOwnProperty(prop))
@@ -18,12 +12,10 @@ function isEmpty(obj) {
 
     return JSON.stringify(obj) === JSON.stringify({});
 }
-
 module.exports = () => {
     Object.keys(essential).forEach(propName => {
         let propLang = propName.split('.properties')[0]
         propLang = propLang.match(/^.*_([a-z]{2}_[A-Z]{2})$/)
-        
         if (propLang && propLang[1]) {
             // for a list of locales, extract only the keys and values that are in fr_FR en nl_NL but not in the requested locale.
             locales.forEach(locale => {
@@ -36,10 +28,8 @@ module.exports = () => {
                     if (!allLocalesNeeded[locale][propName]) {
                         allLocalesNeeded[locale][newPropName] = {}
                     }
-                    
                     allLocalesNeeded[locale][newPropName] = JSON.parse( JSON.stringify(essential[propName].propJson, null, 4) )
                     if ( isEmpty(essential[propName].propJson) ) {
-                        
                     }
                 }    
             })
@@ -79,20 +69,27 @@ module.exports = () => {
             })
         }
     })
-
-    console.log( toTranslate );
+    //console.log( toTranslate );
     // si toutes les locales sont renseigné pas besoin de le traduire on l'enlève
-    toTranslate.forEach( line => {
-
-        for (let i = 0; i < Object.keys(line).length; i++) {
-            const header = Object.keys(line)[i];
-            console.log(header);
-            if ( !line[header] ) {
-                
-            }
+    let toTranslate2 = []
+    for (let j = 0; j < toTranslate.length; j++) {
+        const line = toTranslate[j];
+        lineKeys = Object.keys(line)
+        if (
+            !(line.key &&
+            line.fr_FR &&
+            line.nl_NL &&
+            line.it_IT &&
+            line.de_DE &&
+            line.nl_BE &&
+            line.es_ES)
+        ) 
+        {
+            toTranslate2.push( line )
         }
+    }
 
-    });
+    console.log( toTranslate2 );
     
 
     // const Json2csvParser = require('json2csv').Parser;
