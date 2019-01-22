@@ -12,7 +12,7 @@ module.exports = function () {
         let keys = Object.keys(translated[prop])
         keys = keys.sort()
         keys.forEach(key => {
-            content += key + ':' + translated[prop][key] + '\n'
+            content += key + '=' + translated[prop][key] + '\n'
         });
         fs.writeFileSync(
             path.join(__dirname, '../generated/translatedProps', newProp),

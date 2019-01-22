@@ -1,9 +1,9 @@
 {
-   "mode": "remove the already translated from extract",
+   "mode": "import",
    
    "cartridgesOrder": "seo_metadatarules:app_sg2sfra:app_caroll:int_gtm:int_atos_sips:app_altima_controllers:app_altima_views:app_altima_core:app_storefront_controllers:app_storefront_core:app_storefront_base:app_feeds:bc_feeds:bc_integrationframework:bc_caroll:int_colissimo:plugin_webdav_storefront",
    "mainCartridge": "app_caroll",
-   "cartridgesPath": "C:\\sfcc\\projets\\caroll\\cartridges",
+   "cartridgesPath": "C:\\Users\\mforriere\\Documents\\projet\\Caroll\\caroll\\caroll-src\\cartridges",
 
    "allProps": "ALL-PROPS.json",
    "essential": "essential.json",
@@ -11,5 +11,5 @@
 
    "languageToTranslate": "fr_FR",
    "newLangage": "nl_BE",
-   "translated": "NE2.json"
+   "translated": "nl_BE.json"
 }
