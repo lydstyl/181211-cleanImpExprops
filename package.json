@@ -11,6 +11,7 @@
   "author": "The Angel",
   "license": "ISC",
   "dependencies": {
+    "json2csv": "^4.3.3",
     "properties": "^1.2.1",
     "recursive-readdir": "^2.2.2",
     "recursive-readdir-sync": "^1.0.6",
