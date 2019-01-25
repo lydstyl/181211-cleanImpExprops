@@ -62,3 +62,8 @@ if (opts.mode == 'babyliss e-commerce extract') {
     // like always, it needs to launch extract mode first
     require('./main/ecommerceExtract') ()
 }
+if (opts.mode == 'babyliss e-commerce import csv to json') {
+    // for a list of locales, extract only the keys and values that are in fr_FR en nl_NL but not in the requested locale.
+    // like always, it needs to launch extract mode first
+    require('./main/eCommerceImportCsvToJson.js') ()
+}
