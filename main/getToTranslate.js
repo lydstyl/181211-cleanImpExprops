@@ -37,7 +37,7 @@ function isLangToTranslate(prop) {
 // new Promise(resolve => {
 //     extractFrontKeys()
 // })
-module.exports = function (lang) {
+module.exports = (lang) => {
     return new Promise(resolve => {
         const essential = require('../generated/essential')
         let toTranslate = {}
