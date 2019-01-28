@@ -1,4 +1,4 @@
-module.exports = () => {
+// module.exports = () => {
     const fs=require('fs')
     const csv=require('csvtojson')
     const csvFilePath='./e-commerce-trads.csv'
@@ -29,4 +29,4 @@ module.exports = () => {
             'utf-8'
         )
     })
-}
+// }

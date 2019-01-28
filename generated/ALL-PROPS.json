@@ -4206,6 +4206,8 @@
                "country.de": "Germany",
                "country.fr": "France",
                "country.france": "France",
+               "country.es": "España",
+               "country.spain": "España",
                "country.gb": "United Kingdom",
                "country.germany": "Germany",
                "country.it": "Italy",
@@ -10471,19 +10473,5 @@
          }
       ],
       "propsNb": 211
-   },
-   {
-      "cartridgeName": "app_babyliss_es",
-      "props": [
-         {
-            "propName": "app_babyliss_es.properties",
-            "propPath": "C:\\sfcc\\projets\\babyliss\\cartridges\\app_babyliss_es\\cartridge\\app_babyliss_es.properties",
-            "propJson": {
-               "demandware.cartridges.app_babyliss_es.id": "app_babyliss_es",
-               "demandware.cartridges.app_babyliss_es.multipleLanguageStorefront": true
-            }
-         }
-      ],
-      "propsNb": 1
    }
 ]
