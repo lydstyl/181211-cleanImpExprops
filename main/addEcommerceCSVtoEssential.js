@@ -4,6 +4,7 @@ module.exports = () => {
     const csvFilePath='./e-commerce-trads.csv'
     const langs=['it_IT','de_DE','nl_BE','es_ES','pt_ES']
     const essential= require('../generated/essential.json')
+    require('./rmDir.js')()
     csv()
     .fromFile(csvFilePath)
     .then((jsonObj)=>{

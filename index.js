@@ -63,15 +63,8 @@ if (opts.mode == 'babyliss e-commerce extract') {
     require('./main/ecommerceExtract') ()
 }
 if (opts.mode == 'babyliss e-commerce import addEcommerceCSVtoEssential') {
-    // first run extract mode
-    // then make essentialWithEcommerceAdded.json with this script
-    // then getToTranslateSync
+    // extract mode
+    // ecomJsonToProp.js
+    // // getToTranslateSync
     require('./main/addEcommerceCSVtoEssential.js') ()
-    
-    
-    
 }
-// if (opts.mode == 'babyliss e-commerce essentialWithEcommerceAdded.json --> properties') {
-//     require('./main/ecommerceToProps.js') ()
-    
-// }
