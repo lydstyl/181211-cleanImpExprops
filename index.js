@@ -1,54 +1,42 @@
-/**
- * Ce script fonctionne avec le fichier opts.json qu'il faut préalablement éditier.
- * 
- * Il comporte 3 modes :
- * 
- * 1/ 'extract' 
- *      Il génère un .json qu'il faudra traduire.
- * 
- * 
- * ATTENTION : pour les autre modes ci-dessous, il est nécessaire d'avoir lancé le mode extract d'abord.
- * 
- * 1.2/ 'remove the already translated from extract'
- *      Il génère un .jsoin qu'il faudra traduire sans ce qui est déjà traduit.
- * 
- * 2/ 'import'
- *      Placez le .json extrait et traduit à la racine de ce dossier.
- *      Le script génère toutes les .properties traduites.
- * 
- * 3/ 'remove duplicates'
- *      Le script génère uniquement les .properties qui avaient une ou plusieurs clés en double.
- */
-
 const opts = require('./opts')
 const path = require('path')
 const rootDir = path.join(__dirname)
 
-if (opts.mode == 'import') {
-    const generateTranslatedProps = require('./main/generateTranslatedProps')
-    generateTranslatedProps()
+// if (opts.mode == 'import') {
+//     const generateTranslatedProps = require('./main/generateTranslatedProps')
+//     generateTranslatedProps()
+// }
+// if (opts.mode == 'extract') {
+//     require( path.join(rootDir, 'scripts/extract/index') )()
+// }
+// if (opts.mode == 'remove duplicates') {
+//     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
+//     rmDuplicateKeys()
+// }
+// if (opts.mode == 'remove the already translated from extract') {
+//     require('./main/rmAlreadyTranslated')()
+// }
+// if (opts.mode == 'extract only new Langage'){ // eg only extract info from properties thant includes es_ES
+//     // needs to launch extract mode first
+//     require('./main/extracOnlyNewLangage')()
+// }
+// if (opts.mode == 'babyliss e-commerce extract') {
+//     // for a list of locales, extract only the keys and values that are in fr_FR en nl_NL but not in the requested locale.
+//     // like always, it needs to launch extract mode first
+//     require('./main/ecommerceExtract') ()
+// }
+// if (opts.mode == 'babyliss e-commerce import addEcommerceCSVtoEssential') {
+//     // extract mode
+//     // addEcommerceCSVtoEssential.js
+//     // ecomJsonToProp.js
+// }
+
+
+console.log(opts.mode);
+
+const modes = {
+    extract: () => {
+        require( path.join(rootDir, 'scripts/extract/index') )()
+    }
 }
-if (opts.mode == 'extract') {
-    require( path.join(rootDir, 'scripts/extract/index') )()
-}
-if (opts.mode == 'remove duplicates') {
-    const rmDuplicateKeys = require('./main/rmDuplicateKeys')
-    rmDuplicateKeys()
-}
-if (opts.mode == 'remove the already translated from extract') {
-    require('./main/rmAlreadyTranslated')()
-}
-if (opts.mode == 'extract only new Langage'){ // eg only extract info from properties thant includes es_ES
-    // needs to launch extract mode first
-    require('./main/extracOnlyNewLangage')()
-}
-if (opts.mode == 'babyliss e-commerce extract') {
-    // for a list of locales, extract only the keys and values that are in fr_FR en nl_NL but not in the requested locale.
-    // like always, it needs to launch extract mode first
-    require('./main/ecommerceExtract') ()
-}
-if (opts.mode == 'babyliss e-commerce import addEcommerceCSVtoEssential') {
-    // extract mode
-    // addEcommerceCSVtoEssential.js
-    // ecomJsonToProp.js
-}
+modes[opts.mode]()
