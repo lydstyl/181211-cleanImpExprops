@@ -322,6 +322,8 @@
          "country.de": "Germany",
          "country.fr": "France",
          "country.france": "France",
+         "country.es": "España",
+         "country.spain": "España",
          "country.gb": "United Kingdom",
          "country.germany": "Germany",
          "country.it": "Italy",
@@ -10530,14 +10532,5 @@
       "cartridgeName": "app_babyliss_fr",
       "isDuplicated": false,
       "propPath": "C:\\sfcc\\projets\\babyliss\\cartridges\\app_babyliss_fr\\cartridge\\templates\\resources\\storepickup_it_IT.properties"
-   },
-   "app_babyliss_es.properties": {
-      "propJson": {
-         "demandware.cartridges.app_babyliss_es.id": "app_babyliss_es",
-         "demandware.cartridges.app_babyliss_es.multipleLanguageStorefront": true
-      },
-      "cartridgeName": "app_babyliss_es",
-      "isDuplicated": false,
-      "propPath": "C:\\sfcc\\projets\\babyliss\\cartridges\\app_babyliss_es\\cartridge\\app_babyliss_es.properties"
    }
 }

@@ -62,3 +62,8 @@ if (opts.mode == 'babyliss e-commerce extract') {
     // like always, it needs to launch extract mode first
     require('./main/ecommerceExtract') ()
 }
+if (opts.mode == 'babyliss e-commerce import addEcommerceCSVtoEssential') {
+    // extract mode
+    // addEcommerceCSVtoEssential.js
+    // ecomJsonToProp.js
+}
