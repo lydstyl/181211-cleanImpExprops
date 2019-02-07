@@ -1,4 +1,5 @@
  Ce script fonctionne avec le fichier opts.json qu'il faut préalablement éditier.
+ Ce script a été testé avec node 11.7.0 .
  
  Il comporte 3 modes :
  
@@ -20,3 +21,8 @@
 3/ 'remove duplicates'
       Le script génère uniquement les .properties qui avaient une ou plusieurs clés en double.
  
+ 
+ TODO : 
+    en mode import, 
+       il faut vider le dossier des properties avant de lancer le script (à automatiser)
+       des <cartridgeName>.properties sont générées
