@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
-const opts = require('../opts')
+const rootDir = path.join(__dirname, '../')
+const opts = require( path.join(rootDir, 'scripts/extract/settings') )
 
 function isNoLang(prop) {
     let lang = prop.match(/_([a-z]{2}_[A-Z]{2}).properties$/)
@@ -39,6 +40,7 @@ function isLangToTranslate(prop) {
 // })
 module.exports = (lang) => {
     return new Promise(resolve => {
+        console.log('main/getToTranslate BEGIN')
         const essential = require('../generated/essential')
         let toTranslate = {}
         Object.keys(essential).forEach(prop => {
@@ -65,6 +67,8 @@ module.exports = (lang) => {
             'utf8'
         )
         //return toTranslate
+        console.log('main/getToTranslate END')
+        resolve()
     })
 }
 // module.exports() // for debug and to comment after
