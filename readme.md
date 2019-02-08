@@ -38,5 +38,4 @@ Les modes :
      Attention ce script réutiliser le mode 'extract' il faut donc configurer opts.json extract/settings.js et specificExtract/settings.js
 
 TODO : 
-     Enlever le trie dans les props
      Il faut refaire toutes les old features ou old modes à la manière des nouveaux modes extract et import
