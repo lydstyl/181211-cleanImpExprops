@@ -1,17 +1,17 @@
 const fs = require('fs')
 const path = require('path')
 const rootDir = path.join(__dirname, '../')
-const opts = require( path.join(rootDir, 'scripts/import/settings') )
+const settings = require( path.join(rootDir, 'scripts/import/settings') )
 module.exports = function () {
     return new Promise( resolve => {
         console.log('import BEGIN')
-        const translated = require( opts.translated )
+        const translated = require( settings.translated )
         Object.keys(translated).forEach(prop => {
-            let content = opts.generatedBy
+            let content = settings.generatedBy
             let newProp = prop.split('.properties')[0]
-            newProp = newProp + '_' + opts.newLangage + '.properties'
+            newProp = newProp + '_' + settings.newLangage + '.properties'
             let keys = Object.keys(translated[prop])
-            keys = keys.sort()
+            if ( settings.sortKeys ) keys = keys.sort()
             keys.forEach(key => {
                 content += key + '=' + translated[prop][key] + '\n'
             })

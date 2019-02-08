@@ -72,9 +72,3 @@ module.exports = () => {
         resolve( allProps )
     })
 }
-// module.exports = async () => {
-//     console.log('calling');
-//     var result = await extractAllFrontKeys();
-//     console.log(result);
-//     // expected output: 'resolved'
-// }
