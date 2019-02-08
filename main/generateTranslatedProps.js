@@ -7,7 +7,7 @@ module.exports = function () {
         console.log('import BEGIN')
         const translated = require( opts.translated )
         Object.keys(translated).forEach(prop => {
-            let content = '#Generate by an Angel\n'
+            let content = opts.generatedBy
             let newProp = prop.split('.properties')[0]
             newProp = newProp + '_' + opts.newLangage + '.properties'
             let keys = Object.keys(translated[prop])
