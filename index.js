@@ -1,7 +1,25 @@
 const opts = require('./opts')
 const path = require('path')
 const rootDir = path.join(__dirname)
+const modes = {
+    extract: () => {
+        require( path.join(rootDir, 'scripts/extract/') )()
+    },
+    import: () => {
+        require( path.join(rootDir, 'scripts/import/') )()
+    },
+    specificExtract: () => {
+        require( path.join(rootDir, 'scripts/specificExtract/') )()
+    }
+}
+try {
+    modes[opts.mode]()
+} catch (error) {
+    console.log(`Le mode ${opts.mode} n'existe pas, merci de le modifier dans opts.json\n`)
+    console.log(error);
+}
 
+// // OLD MODE TO DO THE WAY LIKE EXTRACT OR IMPORT
 // if (opts.mode == 'remove duplicates') {
 //     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
 //     rmDuplicateKeys()
@@ -23,21 +41,3 @@ const rootDir = path.join(__dirname)
 //     // addEcommerceCSVtoEssential.js
 //     // ecomJsonToProp.js
 // }
-
-const modes = {
-    extract: () => {
-        require( path.join(rootDir, 'scripts/extract/index') )()
-    },
-    import: () => {
-        require( path.join(rootDir, 'scripts/import/index') )()
-    },
-    specificExtract: () => {
-        require( path.join(rootDir, 'scripts/specificExtract/index') )()
-    }
-}
-try {
-    modes[opts.mode]()
-} catch (error) {
-    console.log(`Le mode ${opts.mode} n'existe pas, merci de le modifier dans opts.json\n`)
-    console.log(error);
-}
