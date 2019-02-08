@@ -1,13 +1,13 @@
 const path = require('path')
 const rootDir = path.join(__dirname, '../../')
 async function async () {
-    console.log('1');
+    console.log('1')
     await require( path.join(rootDir, 'main/extractFrontKeys') )()
-    console.log('2');
+    console.log('2')
     await require( path.join(rootDir, 'main/getEssential') )()
-    console.log('3');
+    console.log('3')
     await require( path.join(rootDir, 'main/getToTranslate') )()
-    console.log('4');
+    console.log('4')
     await require( path.join(rootDir, 'scripts/specificExtract/specificExtract') )()
     console.log('5')
 }
