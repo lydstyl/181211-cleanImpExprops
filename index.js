@@ -6,9 +6,6 @@ const rootDir = path.join(__dirname)
 //     const generateTranslatedProps = require('./main/generateTranslatedProps')
 //     generateTranslatedProps()
 // }
-// if (opts.mode == 'extract') {
-//     require( path.join(rootDir, 'scripts/extract/index') )()
-// }
 // if (opts.mode == 'remove duplicates') {
 //     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
 //     rmDuplicateKeys()
@@ -31,12 +28,12 @@ const rootDir = path.join(__dirname)
 //     // ecomJsonToProp.js
 // }
 
-
-console.log(opts.mode);
-
 const modes = {
     extract: () => {
         require( path.join(rootDir, 'scripts/extract/index') )()
+    },
+    import: () => {
+        require( path.join(rootDir, 'scripts/import/index') )()
     }
 }
 modes[opts.mode]()
