@@ -2,10 +2,6 @@ const opts = require('./opts')
 const path = require('path')
 const rootDir = path.join(__dirname)
 
-// if (opts.mode == 'import') {
-//     const generateTranslatedProps = require('./main/generateTranslatedProps')
-//     generateTranslatedProps()
-// }
 // if (opts.mode == 'remove duplicates') {
 //     const rmDuplicateKeys = require('./main/rmDuplicateKeys')
 //     rmDuplicateKeys()
