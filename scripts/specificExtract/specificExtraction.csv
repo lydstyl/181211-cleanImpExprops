@@ -1,0 +1,10 @@
+key§fr_FR§fr_BE§nl_BE§de_DE§es_ES§pt_ES§it_IT§
+checkout > cart.title§§§§§Carro§§§
+locale > global.invalidphone§Saisissez un numéro de téléphone valide.§Saisissez un numéro de téléphone valide. ^0(d|d{2}|4d{2})((s?d{2}){3})$§§§Por favor, especifique un número de teléfono válido.§§§
+locale > global.invalidpostal§Format requis : 12345, pour rappel nous ne livrons qu'en France Métropolitaine§^(?:(?:[1-9])(?:d{3}))$§Vereist formaat: 1234, we herhalen dat we alleen leveren in Metropolitaans Frankrijk§Erforderliches Format: 12345, zur Erinnerung, dass wir nur nach Frankreich liefern.§Formato requerido: 28003§Formato obrigatório: 12345, tenha em atenção que apenas fazemos envios para a França Metropolitana§Format requis : 12345, pour rappel nous ne livrons qu'en France Métropolitaine§
+forms > address.phone.example§Exemple : 01 23 45 67 89§Exemples : 01 111 11 11 ou 011 11 11 11 ou 0411 11 11 11 avec ou sans espaces§Exemples : 01 111 11 11 ou 011 11 11 11 ou 0411 11 11 11 avec ou sans espaces§Beispiel: 01 23 45 67 89§Ejemplo:  612345678§§Esempio: 01 23 45 67 89§
+forms > address.postalcode.example§Exemple : 12345§Exemple : F-12345 ou 12345§Voorbeeld: 12345§Beispiel: 12345§Ejemplo: 28003§Exemplo: 12345§Exemple : 12345§
+forms > country.es§§§§§España§§§
+forms > country.spain§§§§§España§§§
+forms > paymentMethodType.label§Carte bancaire§§§§Método de pago§§§
+forms > profile.newpassword§Nouveau mot de passe§Nouveau mot de passe§§§Nueva contraseña§§§
