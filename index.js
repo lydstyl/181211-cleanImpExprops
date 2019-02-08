@@ -36,4 +36,9 @@ const modes = {
         require( path.join(rootDir, 'scripts/import/index') )()
     }
 }
-modes[opts.mode]()
+try {
+    modes[opts.mode]()
+} catch (error) {
+    console.log(`Le mode ${opts.mode} n'existe pas, merci de le modifier dans opts.json\n`)
+    console.log(error);
+}
