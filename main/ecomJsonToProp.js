@@ -12,7 +12,6 @@ Object.keys(ess).forEach(propName => {
     })
     fs.writeFileSync(
         path.join(__dirname, `../generated/props/${propName}`),
-        // `../generated/props/${propName}`,
         prop,
         'utf-8'
     )

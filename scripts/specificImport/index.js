@@ -13,7 +13,6 @@ async function async () {
     const jsonArray = await csv().fromFile( settings.csv )
     await require( path.join(rootDir, 'scripts/specificImport/specificImport') )(jsonArray)
     console.log('5')
-
     await require( path.join( rootDir, 'helper/emptyDir' ) )( path.join( rootDir, 'scripts/import/generatedProps') )
     console.log('6')
     await require( path.join(rootDir, 'main/generateTranslatedProps') )()
