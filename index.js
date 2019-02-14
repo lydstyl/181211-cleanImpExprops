@@ -10,6 +10,9 @@ const modes = {
     },
     specificExtract: () => {
         require( path.join(rootDir, 'scripts/specificExtract/') )()
+    },
+    specificImport: () => {
+        require( path.join(rootDir, 'scripts/specificImport/') )()
     }
 }
 try {

@@ -37,5 +37,14 @@ Les modes :
      Permet d'extraire uniquement des clé spésifiques.
      Attention ce script réutiliser le mode 'extract' il faut donc configurer opts.json extract/settings.js et specificExtract/settings.js
 
+-- 'specificImport'
+     Ce script vous permet de générer les properties uniquement pour quelques key / value dans un csv. 
+     Placer votre csv généré par le mode specificExtract et traduit dans le dossier de ce script.
+     Ce script utilise les scripts :
+          extract au début puis 
+          specificImport puis 
+          import 
+     Vous devez donc paramétrer le fichier opts.json ainsi que les 3 settings.js des scripts utilisés.
+
 TODO : 
      Il faut refaire toutes les old features ou old modes à la manière des nouveaux modes extract et import

@@ -1,0 +1,14 @@
+key,fr_FR,fr_BE,nl_BE,de_DE,es_ES,pt_ES,it_IT
+account > account.addressbook.editaddress.defaultaddress,Adresse par défaut,Adresse par défaut,,,Dirección predeterminada,,
+account > account.addressbook.editaddress.makedefaultaddress,Adresse par défaut,Adresse par défaut,,,Dirección predeterminada,,
+account > account.addressbook.addressinclude.delete,Supprimer,Supprimer,,,Eliminar,,
+account > account.addressbook.addresslist.create.label,Créer une adresse pour ce compte,Créer une adresse pour ce compte,,,Crear una dirección para esta cuenta,,
+email > passwordemail.corpsmessage,<br/><br/>,<br/><br/>,<br/><br/>We hebben een verzoek ontvangen om het wachtwoord dat aan dit e-mailadres is gekoppeld te wijzigen. Hebt u dit verzoek verstuurd, volg dan de onderstaande instructies. ,<br/>Hemos recibido una solicitud para cambiar la contraseña asociada con esta dirección de correo electrónico. ¿Has enviado esta solicitud?<br/>,<br/><br/>,<br/><br/>
+locale > global.invalidphone,Saisissez un numéro de téléphone valide.,,,,Introduce un número de teléfono válido,,
+locale > global.invalidpostal,Format requis : 12345,,,,Formato requerido: 12345,,
+forms > address.phone.example,Exemple : 01 23 45 67 89,Exemples : 01 111 11 11 ou 011 11 11 11 ou 0411 11 11 11 avec ou sans espaces,Exemples : 01 111 11 11 ou 011 11 11 11 ou 0411 11 11 11 avec ou sans espaces,Beispiel: 01 23 45 67 89,Ejemplo:  612345678,,Esempio: 01 23 45 67 89
+forms > address.postalcode.example,Exemple : 12345,Exemple : F-12345 ou 12345,Voorbeeld: 12345,Beispiel: 12345,Ejemplo: 28003,Exemplo: 12345,Exemple : 12345
+forms > label.currentpassword,Current Password,,,,Contraseña actual,,
+forms > paymentMethodType.label,Carte bancaire,,,,Tarjeta bancaria,,
+forms > profile.newpassword,Nouveau mot de passe,Nouveau mot de passe,,,Nueva contraseña,,
+storepickup > storelist.cart,Panier,Panier,,,Carro,,
