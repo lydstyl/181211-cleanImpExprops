@@ -38,7 +38,7 @@ function isLangToTranslate(prop) {
 // new Promise(resolve => {
 //     extractFrontKeys()
 // })
-module.exports = (lang) => {
+module.exports = () => {
     return new Promise(resolve => {
         console.log('main/getToTranslate BEGIN')
         const essential = require('../generated/essential')
@@ -50,7 +50,7 @@ module.exports = (lang) => {
         });
         Object.keys(essential).forEach(prop => { // eg: "xxx_fr_FR.properties" if fr_FR is the language to translate
             if ( isLangToTranslate(prop).res ) {
-                let propName = prop.split( '_' + isLangToTranslate(prop).lang )[0] + '.properties'
+                let propName = prop.split( '_' + isLangToTranslate(prop).lang )[0] //+ '.properties' // homepage_es_ES.properties.properties"
                 Object.keys(essential[prop].propJson).forEach(key => {
                     if ( !toTranslate[propName] ) {
                         toTranslate[propName] = {}
