@@ -3,6 +3,7 @@ const path = require('path')
 const rootDir = path.join(__dirname, '../')
 const mode = require( path.join(rootDir, 'opts') ).mode
 const settings = require( path.join(rootDir, 'scripts/import/settings') )
+const ext = `_${settings.newLangage}.properties`
 module.exports = function () {
     return new Promise( resolve => {
         console.log('import BEGIN')
@@ -10,12 +11,7 @@ module.exports = function () {
         Object.keys(translated).forEach(prop => {
             let content = settings.generatedBy
             let newProp = prop.split('.properties')[0]
-            if ( mode === 'specificImport' ) {
-                newProp = newProp + '.properties'
-            }
-            else{
-                newProp = newProp + '_' + settings.newLangage + '.properties'
-            }
+            newProp = newProp + ext
             let keys = Object.keys(translated[prop])
             if ( settings.sortKeys ) keys = keys.sort()
             keys.forEach(key => {

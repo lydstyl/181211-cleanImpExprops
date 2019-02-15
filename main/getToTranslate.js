@@ -2,9 +2,10 @@ const fs = require('fs')
 const path = require('path')
 const rootDir = path.join(__dirname, '../')
 const opts = require( path.join(rootDir, 'scripts/extract/settings') )
+const regex = /_([a-z]{2}_[A-Z]{2})|([a-z]{2}).properties$/ // peut etre forms_en
 
 function isNoLang(prop) {
-    let lang = prop.match(/_([a-z]{2}_[A-Z]{2}).properties$/)
+    let lang = prop.match( regex ) 
     if (lang == null) {
         return true
     }
@@ -13,7 +14,7 @@ function isNoLang(prop) {
     }
 }
 function isLangToTranslate(prop) {
-    let lang = prop.match(/_([a-z]{2}_[A-Z]{2}).properties$/)
+    let lang = prop.match( regex )
     if (lang == null) {
         return {res: false}
     }
@@ -35,9 +36,16 @@ function isLangToTranslate(prop) {
  * if fr_FR is the langage to translate
  * then the xxx_fr_FR.properties keys will replace the xxx.properties keys
  */
-// new Promise(resolve => {
-//     extractFrontKeys()
-// })
+function getNoPropertiesName(prop) {
+    let noPropertiesName = prop.replace(/.properties/, '')
+    const tmp = noPropertiesName.match(/_([a-z]{2}_[A-Z]{2})|([a-z]{2})$/)[1] // can be /_es_ES/ or /_en/
+    if (tmp) {
+        const r = new RegExp( '_' + tmp ) 
+        noPropertiesName = noPropertiesName.replace(r, '')
+    }
+    return noPropertiesName
+}
+
 module.exports = () => {
     return new Promise(resolve => {
         console.log('main/getToTranslate BEGIN')
@@ -45,28 +53,31 @@ module.exports = () => {
         let toTranslate = {}
         Object.keys(essential).forEach(prop => {
             if ( isNoLang(prop) ) { // eg: "xxx.properties"
-                toTranslate[prop] = essential[prop].propJson
+                const noPropertiesName = getNoPropertiesName(prop)
+                if ( !/^\./.test(noPropertiesName) ) {
+                    toTranslate[noPropertiesName] = essential[prop].propJson
+                }
             }
         });
         Object.keys(essential).forEach(prop => { // eg: "xxx_fr_FR.properties" if fr_FR is the language to translate
             if ( isLangToTranslate(prop).res ) {
-                let propName = prop.split( '_' + isLangToTranslate(prop).lang )[0] //+ '.properties' // homepage_es_ES.properties.properties"
+                let propName = prop.split( '_' + isLangToTranslate(prop).lang )[0]
+                const noPropertiesName = getNoPropertiesName(prop)
                 Object.keys(essential[prop].propJson).forEach(key => {
-                    if ( !toTranslate[propName] ) {
-                        toTranslate[propName] = {}
+                    if ( !/^\./.test(noPropertiesName) ) {
+                        if ( !toTranslate[noPropertiesName] ) {
+                            toTranslate[noPropertiesName] = {}
+                        }
+                        toTranslate[noPropertiesName][key] = essential[prop].propJson[key]
                     }
-                    // console.log(`\n${key}:\nNo lang properties: ${toTranslate[propName][key]}\nreplaced by ${opts.languageToTranslate} properties\n${essential[prop].propJson[key]}`);
-                    toTranslate[propName][key] = essential[prop].propJson[key]
                 });
             }
         });
         fs.writeFileSync(
-            // path.join(__dirname, '../generated/TO-TRANSLATE.json'),
             path.join(__dirname, '../generated', opts.toTranslate),
             JSON.stringify( toTranslate, '', 3 ),
             'utf8'
         )
-        //return toTranslate
         console.log('main/getToTranslate END')
         resolve()
     })
