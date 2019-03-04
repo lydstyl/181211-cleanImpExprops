@@ -36,7 +36,7 @@ Le script
 * génère toutes les .properties traduites du .json
 
 ## specificExtract
-Permet d'extraire uniquement des clé spécifiques.
+Permet d'extraire uniquement des clé spécifiques sous la forme d'un .csv
 Attention ce script réutilise le mode 'extract' il faut donc configurer opts.json extract/settings.js et specificExtract/settings.js
 
 ## specificImport
@@ -47,6 +47,9 @@ Ce script utilise les scripts :
 * specificImport puis 
 * import 
 Vous devez donc paramétrer le fichier opts.json ainsi que les 3 settings.js des scripts utilisés.
+Remarques : 
+* Pour le moment ce script utilise 'import' vous ne pouvez donc avoir qu'une langue générée à la fois. Il vous faudra donc modifier import/settings et relancer le script pour les autre langues.
+* Comme ce script utilise 'import' il génère toutes les properties même celles non demandées.
 
 
 # TODO
