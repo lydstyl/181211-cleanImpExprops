@@ -38,6 +38,7 @@ Le script
 ## specificExtract
 Permet d'extraire uniquement des clé spécifiques sous la forme d'un .csv
 Attention ce script réutilise le mode 'extract' il faut donc configurer opts.json extract/settings.js et specificExtract/settings.js
+Attention, il est plus prudent qu'il n'y ait qu'une seule colonne de traduction dans le csv exemple seulement it_IT
 
 ## specificImport
 Ce script vous permet de générer les properties uniquement pour quelques key / value dans un csv. 
