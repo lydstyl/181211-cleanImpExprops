@@ -22,6 +22,7 @@ Pour le faire fonctionner, il faut configurer le mode et les settings du mode.
 
 
 # MODES
+
 ## extract 
 Il génère :
 * ALL-PROPS.json un gros fichier qui contient toutes les properties de toutes les cartriges
@@ -52,10 +53,13 @@ Remarques :
 * Comme ce script utilise 'import' il génère toutes les properties même celles non demandées.
 * Attention, il est plus prudent qu'il n'y ait qu'une seule colonne de traduction dans le csv exemple seulement it_IT
 
+## specificImport
+Pour une liste de locales, extrait seulement les keys / values qui sont en fr_FR et nl_NL mais pas dans la locale demandée.
+Ce script étant destiné à être peu utilisé, il n'a pas de settings pour le moment. Il devra être amélioré s'il s'avère qu'on en a souvent besoin.
 
 # TODO
 Il faut refaire les old modes suivant :
-* babyliss e-commerce import addEcommerceCSVtoEssential
+* remove duplicates
 * extract only new Langage
 * remove the already translated from extract
-* remove duplicates
+* babyliss e-commerce import addEcommerceCSVtoEssential

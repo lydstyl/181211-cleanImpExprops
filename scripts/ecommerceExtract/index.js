@@ -1,4 +1,3 @@
-// for a list of locales, extract only the keys and values that are in fr_FR and nl_NL but not in the requested locale.
 const path = require('path')
 const rootDir = path.join(__dirname, '../../')
 async function async() {

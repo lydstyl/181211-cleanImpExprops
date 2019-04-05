@@ -1,3 +1,162 @@
-"key","fr_FR","de_DE","it_IT","de_AT","en_AE","es_ES","fr_BE","nl_BE","nl_NL"
-"account > wishlistresult.firstname","Prénom","Vorname","Nome di battesimo","vorname","First name","Nombre de pila","Prénom","Voornaam","Voornaam"
-"account > wishlistresult.lastname","Nom","Nachname","Cognome","Nachname","Last name","Apellido","Nom","Achternaam","Achternaam"
+key,fr_FR,it_IT
+account > account.addressbook.addresslist.create,Créer une adresse,Créer une adresse
+account > account.addressbook.addresslist.header,Adresses,Indirizzo
+account > account.addressbook.miniaddress.phone,Téléphone :,Téléphone :
+account > account.header,Mon compte,Mon compte
+account > account.header.creataccount,Création de compte,Création de compte
+account > account.login.checkmessage,Affichez votre commande même si vous n'êtes pas un utilisateur enregistré. Saisissez le numéro de la commande ainsi que le code postal de l'adresse de facturation., auch wenn Sie kein registrierter Benutzer sind.  Geben Sie die Nummer der Bestellung sowie die Postleitzahl der Rechnungsadresse ein.
+account > account.login.logininclude.customersheader,Connectez-vous,Connectez-vous
+account > account.login.logininclude.forgotpassword,Mot de passe oublié ?,Mot de passe oublié ?
+account > account.login.logininclude.forgotpassword.label,Demander la réinitialisation de votre mot de passe,Demander la réinitialisation de votre mot de passe
+account > account.login.logininclude.locked,Ce compte est actuellement verrouillé.  Veuillez réessayer plus tard.,Ce compte est actuellement verrouillé.  Veuillez réessayer plus tard.
+account > account.login.logininclude.loginerror,Désolé,Leider entsprechen Ihre Angaben keinem bei uns registrierten Profil.  Überprüfen Sie die Schreibweise und versuchen Sie es erneut.
+account > account.login.logininclude.loginfberror,Désolé,Diese Adresse ist bereits einem anderen Konto zugeordnet
+account > account.login.logininclude.oauthcustomersheader,Connectez-vous à l'aide de votre compte à partir de,Connectez-vous à l'aide de votre compte à partir de
+account > account.login.logininclude.oauthcustomersheaderreturning,Vous vous êtes déjà connecté à l'aide du fournisseur externe ci-dessous. Cliquez sur ce fournisseur pour vous connecter à nouveau., um sich erneut anzumelden.
+account > account.login.logininclude.registered,Saisissez votre adresse email et votre mot de passe pour vous identifier sur le site., um sich auf der Webseite anzumelden.
+account > account.login.orderbutton,Vérifier la commande,Vérifier la commande
+account > account.login.ordererror,Désolé, cette adresse e-mail ou ce code postal ne correspond à aucun profil dans nos dossiers. Vérifiez les informations saisies et recommencez.
+account > account.login.orderheader,Vérifier la commande,Vérifier la commande
+account > account.orderdetails.returnorder,<< Retour à l'historique des commandes,<< Retour à l'historique des commandes
+account > account.orderdetails.returnshopping,Poursuivre les achats,Poursuivre les achats
+account > account.orders.datelabel,Date de la commande :,Date de la commande :
+account > account.orders.items,Articles :,Articles :
+account > account.orders.noorders,Nous n'avons aucun enregistrement pour ce compte.,Nous n'avons aucun enregistrement pour ce compte.
+account > account.orders.notfound,Désolé,Leider ist die Bestellung
+account > account.orders.numberlabel,Numéro de commande :,Numéro de commande :
+account > account.orders.orderdetail,Détails de la commande,Détails de la commande
+account > account.orders.orderhistory,Historique des commandes,Storico ordini
+account > account.orders.shippedto,Expédié à :,Expédié à :
+account > account.orderstatusinclude.ordercanceled,Annulé,Annulé
+account > account.orderstatusinclude.ordercontact,Contactez le support client :,Contactez le support client :
+account > account.orderstatusinclude.orderprocessed,En cours de traitement,En cours de traitement
+account > account.orderstatusinclude.ordershipped,Expédié,Expédié
+account > account.orderstatusinclude.statuslabel,État de la commande :,État de la commande :
+account > account.passwordchangedemail.dear,Cher(ère),Cher(ère)
+account > account.passwordchangedemail.message1,Vous venez de créer un nouveau mot de passe pour votre compte.,Vous venez de créer un nouveau mot de passe pour votre compte.
+account > account.passwordchangedemail.message2,Vous pouvez accéder à votre compte à ,Vous pouvez accéder à votre compte à
+account > account.passwordchangedemail.message3,Cet e-mail est généré automatiquement,Diese E-Mail wurde automatisch versandt
+account > account.passwordchangedemail.subject,Votre nouveau mot de passe,Votre nouveau mot de passe
+account > account.passwordreset.button,Envoyer,Envoyer
+account > account.passwordreset.message,Indiquez votre adresse e-mail pour recevoir un message permettant de réinitialiser votre mot de passe., um eine Nachricht zu erhalten
+account > account.passwordreset.notfounderror,Aucune adresse e-mail correspondante n'a été trouvée.,Aucune adresse e-mail correspondante n'a été trouvée._x000D_
+account > account.passwordreset.resubmit,Pour envoyer une nouvelle demande,Um eine neue Anfrage zu senden
+account > account.passwordreset.sent,Consultez votre messagerie pour voir si vous avez reçu un e-mail contenant un lien pour réinitialiser votre mot de passe., um zu sehen
+account > account.passwordreset.title,Réinitialiser le mot de passe,Réinitialiser le mot de passe
+account > account.passwordreset.title2,Demande de réinitialisation de votre mot de passe,Demande de réinitialisation de votre mot de passe
+account > account.passwordresetconfirm.homepagelink,Aller à la page d'accueil,Aller à la page d'accueil
+account > account.passwordresetconfirm.message,Nous vous remercions de nous avoir communiqué votre adresse e-mail. Nous vous avons envoyé un e-mail contenant les informations nécessaires pour réinitialiser votre mot de passe. La réception de cet e-mail peut prendre quelques minutes. Vérifiez dans votre dossier des courriers indésirables si vous n'avez pas déjà reçu cet e-mail., wenn Sie diese E-Mail noch nicht erhalten haben.
+account > account.passwordresetconfirm.title,Demande de réinitialisation de votre mot de passe reçue,Demande de réinitialisation de votre mot de passe reçue
+account > account.paymentinstrumentdetails.expires,Date d'expiration :,Date d'expiration :
+account > account.paymentinstrumentlist.addcard,Ajouter une carte de crédit,Ajouter une carte de crédit
+account > account.paymentinstrumentlist.addcard.label,Ajouter une carte de crédit à ce compte,Ajouter une carte de crédit à ce compte
+account > account.paymentinstrumentlist.header,Informations de carte de crédit,Informations de carte de crédit
+account > account.setnewpassword.title,Définir un nouveau mot de passe,Définir un nouveau mot de passe
+account > account.setnewpasswordconfirm.title,Mot de passe modifié,
+account > account.setnewpasswordconfirm.message,Opération réussie Vous avez créé un nouveau mot de passe pour votre compte.,
+account > account.user.registration.createnew,Créer un compte,Crea account
+account > account.user.registration.editaccount,Données personnelles,Dati personali
+account > account.user.registration.editname,Modifier nom / email,Modificare nome / e-mail
+account > account.user.registration.logininfo,E-mail/informations de connexion,E-mail/informations de connexion
+account > account.user.registration.name,Nom / Email,Nome / e-mail
+account > wishlist.addaddress,Ajouter une adresse de livraison,Ajouter une adresse de livraison
+checkout > approachingpromo.purchase,Achetez,Achetez
+checkout > approachingpromo.receive,et recevez,et recevez
+checkout > billing.addressheader,Facturation,Facturation
+checkout > billing.creditcarddeleteconfirm,Voulez-vous supprimer cette carte de crédit ?,Voulez-vous supprimer cette carte de crédit ?
+checkout > billing.creditcarddeleted,La carte de crédit a été supprimée !,La carte de crédit a été supprimée !
+checkout > billing.creditcarddeletenotselected,Sélectionnez la carte de crédit à supprimer., die entfernt werden soll.
+checkout > billing.creditcardexpires,Expire,Expire
+checkout > billing.creditcardlistexp,Expiration,Expiration
+checkout > billing.creditcardlistnocards,Il n'y a actuellement aucune carte enregistrée.,Il n'y a actuellement aucune carte enregistrée.
+checkout > billing.creditcardlistselect,Sélectionner parmi les cartes enregistrées,Sélectionner parmi les cartes enregistrées
+checkout > billing.creditcardloaderror,Impossible de charger la carte de crédit !, die Kreditkarte zu belasten!
+checkout > billing.creditcardnotdeleted,La carte de crédit n'a pas pu être supprimée !,La carte de crédit n'a pas pu être supprimée !
+checkout > billing.deletecard,Supprimer la carte,Supprimer la carte
+checkout > billing.missingprocessorerror,Le mode de paiement que vous avez sélectionné n'est pas disponible actuellement. Sélectionnez un autre mode de paiement.,Le mode de paiement que vous avez sélectionné n'est pas disponible actuellement. Sélectionnez un autre mode de paiement.
+checkout > billing.newcreditcardadded,La nouvelle carte de crédit a été ajoutée.,La nouvelle carte de crédit a été ajoutée.
+checkout > billing.ownerparseerror,Ceci est un numéro de carte de crédit. Saisissez le nom du titulaire de la carte de crédit.,Ceci est un numéro de carte de crédit. Saisissez le nom du titulaire de la carte de crédit.
+checkout > billing.paymentheader,Sélectionner un mode de paiement,Sélectionner un mode de paiement
+checkout > billing.selectcreditcard,Sélectionner une carte de crédit,Sélectionner une carte de crédit
+checkout > billing.zerobalance,Le solde à payer de votre commande est nul. Par conséquent,Der zu zahlende Restbetrag aus Ihrer Bestellung beträgt Null. Deshalb ist keine Auswahl der Zahlungsart erforderlich
+checkout > cart.bonusnumselected,Vous avez sélectionné {0} article(s).,Vous avez sélectionné {0} article(s).
+checkout > cart.bonusproduct.button.more,plus,plus
+checkout > cart.cartcouponinvalid,Votre panier contient actuellement un bon de réduction invalide. Supprimez ce bon de réduction avant d'accéder au paiement.,Votre panier contient actuellement un bon de réduction invalide. Supprimez ce bon de réduction avant d'accéder au paiement.
+checkout > cart.cartempty,Votre panier est vide,Votre panier est vide
+checkout > cart.carterror,Votre panier ne peut pas être validé car un ou plusieurs produits, weil er einen oder mehrere Artikel_x000D_
+checkout > cart.COUPON_CODE_MISSING,Saisissez un code promo.,Saisissez un code promo.
+checkout > cart.COUPON_CODE_UNKNOWN,"Le code de bon de réduction ""{0}"" est inconnu.","Le code de bon de réduction ""{0}"" est inconnu."
+checkout > cart.couponcode,Numéro du bon de réduction :,Numéro du bon de réduction :
+checkout > cart.entercouponcode,code promo,code promo
+checkout > cart.itemtotal,Total des articles,Total des articles
+checkout > cart.lastvisited.header,Date de la dernière visite,Date de la dernière visite
+checkout > cart.limitedQuantity,Votre panier ne peut actuellement pas être converti en commande car un ou plusieurs produits qu'il contient ont un prix non valide ou ne sont pas disponibles dans la quantité demandée. Pour toute question,Ihr Einkaufskorb kann zurzeit nicht als Bestellung aufgenommen werden
+checkout > cart.NO_ACTIVE_PROMOTION,"Le code de bon de réduction ""{0}"" ne peut actuellement pas être ajouté à votre panier.","Le code de bon de réduction ""{0}"" ne peut actuellement pas être ajouté à votre panier."
+checkout > cart.option,Option,Option
+checkout > cart.store.deliveryoptions,Options de livraison,Options de livraison
+checkout > cart.store.homedelivery,Livraison à domicile,Consegna a domicilio
+checkout > cart.store.instorepickup,Livraison en magasin,Livraison en magasin
+checkout > cart.store.notavailable,Non disponible,Non disponible
+checkout > cart.store.storepickupaddress,Adresse du magasin,Adresse du magasin
+checkout > cart.taxinvalid,Une erreur s'est produite lors du calcul des taxes pour un ou plusieurs produits de votre panier.,Une erreur s'est produite lors du calcul des taxes pour un ou plusieurs produits de votre panier.
+checkout > cart.unableToAdd,Impossible d'ajouter l'article '{0}' au panier, den Artikel '{0}' zum Einkaufskorb hinzuzufügen
+checkout > checkoutlogin.checkoutguestbutton,Continuer,Continuer
+checkout > checkoutlogin.guestheader,Nouveaux clients,Nouveaux clients
+checkout > checkoutlogin.guestmessage,Vous pouvez passer votre commande sans inscription. Si vous le souhaitez,Sie können bestellen
+checkout > checkoutlogin.guesttitle,Commander en tant qu’invité,Commander en tant qu’invité
+checkout > checkoutlogin.registerbenefits,Pourquoi créer son compte ?,Pourquoi créer son compte ?
+checkout > checkoutprogressindicator.billing,Facturation,Facturation
+checkout > checkoutprogressindicator.placeorder,Commande,Commande
+checkout > checkoutprogressindicator.shipping,Livraison,Livraison
+checkout > checkoutprogressindicator.shippingmethods,Modes de livraison,Modes de livraison
+checkout > checkoutprogressindicator.step1,Étape 1 :,Étape 1 :
+checkout > checkoutprogressindicator.step2,Étape 2 :,Étape 2 :
+checkout > checkoutprogressindicator.step3,Étape 3 :,Étape 3 :
+checkout > checkoutprogressindicator.step4,Étape 4 :,Étape 4 :
+checkout > confirm.error.declined,Votre commande n'a pas pu être validée. Vérifiez vos modes de paiement et recommencez. Nous vous remercions de votre patience.,Votre commande n'a pas pu être validée. Vérifiez vos modes de paiement et recommencez. Nous vous remercions de votre patience.
+checkout > confirm.error.technical,Nous sommes désolés mais votre commande n’a pas pu être validée (le paiement a échoué). Merci de confirmer à nouveau votre commande et de ressaisir les données de paiement.,Nous sommes désolés mais votre commande n’a pas pu être validée (le paiement a échoué). Merci de confirmer à nouveau votre commande et de ressaisir les données de paiement.
+checkout > confirmation.message,Pour toute question sur votre commande,Für Fragen zu Ihrer Bestelllung kontaktieren Sie uns unter
+checkout > confirmation.returnshop,Poursuivre mes achats,Poursuivre mes achats
+checkout > confirmation.thankyou,Merci pour votre commande.,Merci pour votre commande.
+checkout > minibillinginfo.amount,Montant,Montant
+checkout > minibillinginfo.billingaddress,Adresse de facturation,Adresse de facturation
+checkout > minicart.directcheckout,ou aller directement au paiement,ou aller directement au paiement
+checkout > minicart.title,Votre panier,Votre panier
+checkout > minicart.viewcart,Afficher le panier,Afficher le panier
+checkout > minicart.viewcart.label,Aller au panier,Aller au panier
+checkout > minishipments.shippingaddress,Adresse de livraison,Adresse de livraison
+checkout > multishippingshipments.shipment,Livraison,Livraison
+checkout > singleshipping.enteraddress,Livraison,Livraison
+checkout > singleshipping.phonerequired,Pourquoi est-ce obligatoire ?,Pourquoi est-ce obligatoire ?
+checkout > summary.applied,Appliqué,Appliqué
+checkout > summary.couponnumber,N° du bon de réduction :,N° du bon de réduction :
+checkout > summary.editcart,Modifier le panier,Modifier le panier
+checkout > summary.notapplied,Non appliqué,Non appliqué
+checkout > summary.orderdiscount,Remise sur la commande :,Remise sur la commande :
+checkout > summary.ordertotal,Total,Total
+checkout > summary.title,Récapitulatif de la commande,Récapitulatif de la commande
+common > error_forbidden.message,Votre session a peut-être été détournée. Retour à la,Votre session a peut-être été détournée. Retour à la
+components > menulinksleft.ecommerce,E-SHOP,E-SHOP
+components > menulinksright.promotions,Promotions,Promozioni
+components > orderdetails.billingaddress,Adresse de facturation,Adresse de facturation
+components > orderdetails.paymentmethod,Mode de paiement,Mode de paiement
+components > orderdetails.paymenttotal,Total paiement,Total paiement
+components > orderdetails.shippingaddress,Adresse de livraison,Adresse de livraison
+components > orderdetails.shippingdetails,Détails de la livraison,Détails de la livraison
+components > orderdetails.shippingmethod,Mode de livraison :,Mode de livraison :
+components > orderdetails.shippingstatus,état de la livraison :,état de la livraison :
+components > orderdetails.shippingto,Livraison à ,Livraison à
+components > orderdetails.tracking,Numéro de suivi :,Numéro de suivi :
+components > ordersummary.orderdiscount,Remise sur la commande,Remise sur la commande
+components > ordersummary.ordershipping,Livraison,Livraison
+components > ordersummary.ordersubtotal,Sous-total de la commande,Sous-total de la commande
+components > ordersummary.subtotal,Sous-total,Sous-total
+contact > contact.accessories.label,Commande accessoires,Ordine accessori
+email > contactus.other,Demande Autres provenant de votre site Internet,Demande Autres provenant de votre site Internet
+email > contactus.sav,Demande de SAV / Réclamation provenant de votre site Internet,Demande de SAV / Réclamation provenant de votre site Internet
+email > contactus.subject.accessories,Commande accessoires,Ordine accessori
+email > contactus.subject.notice,Notice d'utilisation,Istruzioni per l'uso
+email > contactus.text,Un message a été déposé sur le site Babyliss.FR.,È stato pubblicato un messaggio sul sito Babyliss.it.
+email > orderconfirmation.altorderconfirmed,Votre commande est confirmée !,Il tuo ordine è confermato!
+email > orderconfirmation.azur,N° AZUR 0 810 34 35 36 prix appel local,N° AZUR 0 810 34 35 36 prix appel local
+email > orderconfirmation.contactus,Pour toute question sur votre commande,font-size:16px

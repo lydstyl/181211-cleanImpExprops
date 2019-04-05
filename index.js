@@ -37,11 +37,6 @@ try {
 //     // needs to launch extract mode first
 //     require('./main/extracOnlyNewLangage')()
 // }
-// if (opts.mode == 'babyliss e-commerce extract') {
-//     // for a list of locales, extract only the keys and values that are in fr_FR and nl_NL but not in the requested locale.
-//     // like always, it needs to launch extract mode first
-//     require('./main/ecommerceExtract') ()
-// }
 // if (opts.mode == 'babyliss e-commerce import addEcommerceCSVtoEssential') {
 //     // extract mode
 //     // addEcommerceCSVtoEssential.js
