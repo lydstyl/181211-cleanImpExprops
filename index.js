@@ -13,6 +13,9 @@ const modes = {
     },
     specificImport: () => {
         require( path.join(rootDir, 'scripts/specificImport/') )()
+    },
+    ecommerceExtract: () => {
+        require(path.join(rootDir, 'scripts/ecommerceExtract/') )()
     }
 }
 try {
@@ -30,12 +33,12 @@ try {
 // if (opts.mode == 'remove the already translated from extract') {
 //     require('./main/rmAlreadyTranslated')()
 // }
-// if (opts.mode == 'extract only new Langage'){ // eg only extract info from properties thant includes es_ES
+// if (opts.mode == 'extract only new Langage'){ // eg only extract info from properties that includes es_ES
 //     // needs to launch extract mode first
 //     require('./main/extracOnlyNewLangage')()
 // }
 // if (opts.mode == 'babyliss e-commerce extract') {
-//     // for a list of locales, extract only the keys and values that are in fr_FR en nl_NL but not in the requested locale.
+//     // for a list of locales, extract only the keys and values that are in fr_FR and nl_NL but not in the requested locale.
 //     // like always, it needs to launch extract mode first
 //     require('./main/ecommerceExtract') ()
 // }

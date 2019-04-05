@@ -54,4 +54,8 @@ Remarques :
 
 
 # TODO
-Il faut refaire toutes les old features ou old modes à la manière des nouveaux modes extract et import
+Il faut refaire les old modes suivant :
+* babyliss e-commerce import addEcommerceCSVtoEssential
+* extract only new Langage
+* remove the already translated from extract
+* remove duplicates
