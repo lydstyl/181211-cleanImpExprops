@@ -1,0 +1,10 @@
+locale > global.logout,LOGOUT
+product > product.buy.here,ACQUISTA QUI
+locale > global.totalprice,TOTALE
+checkout > cart.title,Carrello
+locale > globalaccount.create,REGISTRATI
+locale > global.continueplaceorder,Continua >
+locale > global.ordertotal,Totale :
+locale > global.amount,Quantità
+locale > global.paginginformation.showing,Visualizza
+search > search.results,31 Risultati

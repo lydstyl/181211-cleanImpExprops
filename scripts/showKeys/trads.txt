@@ -1,0 +1,10 @@
+LOGOUT #R# LOCALE > GLOBAL.LOGOUT
+ACQUISTA QUI #R# product > product.buy.here
+TOTALE #R# LOCALE > GLOBAL.TOTALPRICE
+Carrello #R# checkout > cart.title
+REGISTRATI #R# LOCALE > GLOBALACCOUNT.CREATE
+Continua > #R# locale > global.continueplaceorder
+Totale : #R# locale > global.ordertotal
+Quantità #R# locale > global.amount
+Visualizza #R# locale > global.paginginformation.showing
+31 Risultati #R# search > search.results
