@@ -68,12 +68,11 @@ Ce script étant destiné à être peu utilisé, il n'a pas de settings pour le 
 ## showKeys
 
 Permet d'afficher les clés sur le storefront afin d'identifier rapidement ce qu'il faut traduire.
-Utilise extract puis, pour une locale donnée, exemple it_IT configurable dans showKeys/settings.js, créé un /scripts/import/translated.json à partir de TO-TRANSLATE.json, ajoute à la fin de chaque value un : " #R# file > my.key"
-Utilise enfin import. A configurer:
+Il utilise extract puis, pour une locale donnée, exemple it_IT configurable dans les settings, créé un .json à partir de TO-TRANSLATE.json en ajoutant à la fin de chaque value un : " #R# file > my.key"
+Utilise enfin import pour la création des .properties. A configurer avant de lancer ce mode :
 
 - ./opts.json
 - ./scripts/extract/settings.js
-- ./scripts/showKeys/settings.js
 - ./scripts/import/settings.js
 
 # TODO
