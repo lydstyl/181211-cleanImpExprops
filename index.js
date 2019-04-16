@@ -1,28 +1,38 @@
-const opts = require('./opts')
-const path = require('path')
-const rootDir = path.join(__dirname)
-const modes = {
-    extract: () => {
-        require( path.join(rootDir, 'scripts/extract/') )()
-    },
-    import: () => {
-        require( path.join(rootDir, 'scripts/import/') )()
-    },
-    specificExtract: () => {
-        require( path.join(rootDir, 'scripts/specificExtract/') )()
-    },
-    specificImport: () => {
-        require( path.join(rootDir, 'scripts/specificImport/') )()
-    },
-    ecommerceExtract: () => {
-        require(path.join(rootDir, 'scripts/ecommerceExtract/') )()
-    }
+const opts = require("./opts");
+const path = require("path");
+const rootDir = path.join(__dirname);
+
+function get(script) {
+  return require(path.join(rootDir, script));
 }
+
+const modes = {
+  extract: () => {
+    get("scripts/extract/")();
+  },
+  import: () => {
+    get("scripts/import/")();
+  },
+  specificExtract: () => {
+    get("scripts/specificExtract/")();
+  },
+  specificImport: () => {
+    get("scripts/specificImport/")();
+  },
+  ecommerceExtract: () => {
+    get("scripts/ecommerceExtract/")();
+  },
+  showKeys: () => {
+    get("scripts/showKeys")();
+  }
+};
 try {
-    modes[opts.mode]()
+  modes[opts.mode]();
 } catch (error) {
-    console.log(`Le mode ${opts.mode} n'existe pas, merci de le modifier dans opts.json\n`)
-    console.log(error);
+  console.log(
+    `Le mode ${opts.mode} n'existe pas, merci de le modifier dans opts.json\n`
+  );
+  console.log(error);
 }
 
 // // OLD MODE TO DO THE WAY LIKE EXTRACT OR IMPORT
